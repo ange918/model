@@ -1,488 +1,598 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À PROPOS - MODELS ACADEMY MANAGEMENT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-        }
-        
-        .page-hero {
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            margin-top: 70px;
-        }
-        
-        .page-hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-content img {
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-text h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        
-        .about-text p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            font-weight: 300;
-            font-size: 0.9rem;
-        }
-        
-        .values {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .value-item {
-            text-align: center;
-            padding: 2rem;
-            background: var(--white);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f0f0;
-        }
-        
-        .value-item i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .value-item h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-        
-        .value-item p {
-            color: var(--text-light);
-            font-weight: 300;
-            font-size: 0.9rem;
-        }
-        
-        .video-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .video-embed {
-            width: 100%;
-            height: 450px;
-            border: none;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-        
-        .gallery img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-        
-        .gallery img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .team {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-        
-        .team-member {
-            text-align: center;
-            background: var(--white);
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f0f0;
-            transition: var(--transition);
-        }
-        
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .team-member img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 3px solid var(--primary-color);
-        }
-        
-        .team-member h3 {
-            margin-bottom: 0.5rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        .team-member p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-weight: 300;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        .team-social {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-        
-        .team-social a {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            transition: var(--transition);
-        }
-        
-        .team-social a:hover {
-            background: var(--text-light);
-            transform: translateY(-3px);
-        }
-        
-        .blog-posts {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .blog-post {
-            background: var(--white);
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f0f0;
-            transition: var(--transition);
-        }
-        
-        .blog-post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .blog-post img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .blog-post-content {
-            padding: 1.5rem;
-        }
-        
-        .blog-post-content h3 {
-            margin-bottom: 0.5rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        .blog-post-content .date {
-            color: var(--text-light);
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-        
-        .blog-post-content p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            font-weight: 300;
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>À PROPOS - MODELS ACADEMY MANAGEMENT</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <style>
+            body {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 300;
             }
-            
+
+            .page-hero {
+                height: 50vh;
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600")
+                        center/cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: var(--white);
+                margin-top: 70px;
+            }
+
             .page-hero h1 {
-                font-size: 2rem;
-                letter-spacing: 4px;
+                font-family: "Cormorant Garamond", serif;
+                font-size: 3rem;
+                font-weight: 300;
+                letter-spacing: 8px;
+                text-transform: uppercase;
             }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="img/models academy.jpg" alt="Models Academy" class="logo-img" loading="eager">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">ACCUEIL</a></li>
-                    <li><a href="about.html" class="active">À PROPOS</a></li>
-                    <li><a href="formations.html">FORMATIONS</a></li>
-                    <li><a href="mannequins.html">MANNEQUINS</a></li>
-                    <li><a href="inscription.html">S'INSCRIRE</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-            <i class='bx bx-menu mobile-menu-btn'></i>
-        </div>
-    </header>
 
-    <section class="page-hero">
-        <h1>À PROPOS DE NOUS</h1>
-    </section>
+            .about-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+                align-items: center;
+            }
 
-    <section class="section">
-        <div class="container">
-            <div class="about-content">
-                <div>
-                    <img src="img/about.jpg" alt="Models Academy" loading="lazy">
-                </div>
-                <div class="about-text">
-                    <h3>NOTRE HISTOIRE</h3>
-                    <p>
-                        Fondée il y a plus de 15 ans, MODELS ACADEMY MANAGEMENT est devenue une référence dans le monde 
-                        du mannequinat et de la formation professionnelle. Notre agence a vu naître et grandir des centaines 
-                        de talents qui brillent aujourd'hui sur les podiums internationaux et dans les plus grands magazines 
-                        de mode.
-                    </p>
-                    <p>
-                        Notre équipe, composée de professionnels chevronnés de l'industrie de la mode, met son expertise 
-                        au service de chaque aspirant mannequin. Nous croyons que chaque personne possède un potentiel unique 
-                        qu'il suffit de révéler et de cultiver.
-                    </p>
-                    <h3 style="margin-top: 2rem;">NOS OBJECTIFS</h3>
-                    <p>
-                        Notre mission est de former des mannequins professionnels complets, capables de s'adapter à tous 
-                        les environnements de la mode. Nous visons l'excellence à travers un enseignement personnalisé, 
-                        des méthodes éprouvées et un suivi individuel de qualité.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="values">
-                <div class="value-item">
-                    <i class='bx bx-trophy'></i>
-                    <h3>EXCELLENCE</h3>
-                    <p>Nous visons la perfection dans chaque formation et accompagnement</p>
-                </div>
-                <div class="value-item">
-                    <i class='bx bx-heart'></i>
-                    <h3>PASSION</h3>
-                    <p>Notre amour pour la mode et le mannequinat guide notre travail quotidien</p>
-                </div>
-                <div class="value-item">
-                    <i class='bx bx-group'></i>
-                    <h3>ACCOMPAGNEMENT</h3>
-                    <p>Un suivi personnalisé pour chaque mannequin, de la formation à la carrière</p>
-                </div>
-                <div class="value-item">
-                    <i class='bx bx-star'></i>
-                    <h3>INNOVATION</h3>
-                    <p>Des méthodes d'enseignement modernes adaptées aux tendances actuelles</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            .about-content img {
+                width: 100%;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
 
-    <section class="section" style="background: var(--secondary-color);">
-        <div class="container">
-            <h2 class="section-title">DÉCOUVREZ NOTRE UNIVERS</h2>
-            <div class="video-container">
-                <p style="margin-bottom: 2rem; color: var(--text-light); font-weight: 300;">
-                    Plongez dans les coulisses de MODELS ACADEMY et découvrez nos formations en action
-                </p>
-                <iframe 
-                    class="video-embed"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                    title="Models Academy Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </section>
+            .about-text h3 {
+                color: var(--primary-color);
+                margin-bottom: 1rem;
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.5rem;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">NOTRE GALERIE</h2>
-            <div class="gallery">
-                <img src="img/mathieu.jpg" alt="Galerie 1" loading="lazy">
-                <img src="img/olerie2.jpg" alt="Galerie 2" loading="lazy">
-                <img src="img/danielle.jpg" alt="Galerie 3" loading="lazy">
-                <img src="img/rita.jpeg" alt="Galerie 4" loading="lazy">
-                <img src="img/lucia7.jpg" alt="Galerie 5" loading="lazy">
-                <img src="img/aurelle.jpg" alt="Galerie 6" loading="lazy">
-                <img src="img/jediel.jpg" alt="Galerie 7" loading="lazy">
-                <img src="img/geordys.jpg" alt="Galerie 8" loading="lazy">
-                <img src="img/gildas.jpg" alt="Galerie 9" loading="lazy">
-                <img src="img/cyr2.jpg" alt="Galerie 10" loading="lazy">
-                <img src="img/joana.jpg" alt="Galerie 11" loading="lazy">
-                <img src="img/rose.jpg" alt="Galerie 12" loading="lazy">
-            </div>
-        </div>
-    </section>
+            .about-text p {
+                margin-bottom: 1rem;
+                line-height: 1.8;
+                color: var(--text-light);
+                font-weight: 300;
+                font-size: 0.9rem;
+            }
 
-    <section class="section" style="background: var(--secondary-color);">
-        <div class="container">
-            <h2 class="section-title">NOTRE ÉQUIPE</h2>
-            <div class="team">
-                <div class="team-member">
-                    <img src="img/gathi.jpg" alt="ore gauthier" loading="lazy">
-                    <h3>ORE I GAUTHIER</h3>
-                    <p>DIRECTEUR & COACH</p>
-                    <div class="team-social">
-                        <a href="#"><i class='bx bxl-facebook'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="#"><i class='bx bx-globe'></i></a>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <img src="img/merveill.jpg" alt="merveille susuni" loading="lazy">
-                    <h3>MERVEILLE S ATIMANGBO</h3>
-                    <p>COACH & DIRECTEUR ARTISTIQUE</p>
-                    <div class="team-social">
-                        <a href="#"><i class='bx bxl-facebook'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="#"><i class='bx bx-globe'></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            .values {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">BLOG & ACTUALITÉS</h2>
-            <div class="blog-posts">
-                <div class="blog-post">
-                    <a href="blog-article-1.html">
-                        <img src="img/about.jpg" alt="Article 1" loading="lazy">
-                    </a>
-                    <div class="blog-post-content">
-                        <div class="date"><i class='bx bx-calendar'></i> 15 NOVEMBRE 2024</div>
-                        <h3>LES TENDANCES DU MANNEQUINAT EN 2024</h3>
-                        <p>Découvrez les nouvelles tendances qui façonnent l'industrie du mannequinat cette année...</p>
-                        <a href="blog-article-1.html" class="btn">LIRE PLUS</a>
-                    </div>
-                </div>
-                <div class="blog-post">
-                    <a href="blog-article-2.html">
-                        <img src="img/models academy.jpg" alt="Article 2" loading="lazy">
-                    </a>
-                    <div class="blog-post-content">
-                        <div class="date"><i class='bx bx-calendar'></i> 10 NOVEMBRE 2024</div>
-                        <h3>COMMENT RÉUSSIR SON PREMIER DÉFILÉ</h3>
-                        <p>Nos conseils d'experts pour aborder sereinement votre première expérience sur le podium...</p>
-                        <a href="blog-article-2.html" class="btn">LIRE PLUS</a>
-                    </div>
-                </div>
-                <div class="blog-post">
-                    <a href="blog-article-3.html">
-                        <img src="img/about.jpg" alt="Article 3" loading="lazy">
-                    </a>
-                    <div class="blog-post-content">
-                        <div class="date"><i class='bx bx-calendar'></i> 5 NOVEMBRE 2024</div>
-                        <h3>LA PRÉPARATION DU BOOK PHOTO PARFAIT</h3>
-                        <p>Tous nos secrets pour créer un portfolio qui saura séduire les agences et clients...</p>
-                        <a href="blog-article-3.html" class="btn">LIRE PLUS</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            .value-item {
+                text-align: center;
+                padding: 2rem;
+                background: var(--white);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                border: 1px solid #f0f0f0;
+            }
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>MODELS ACADEMY</h3>
-                    <p>Votre partenaire pour une carrière réussie dans le mannequinat.</p>
-                    <div class="social-links">
-                        <a href="#"><i class='bx bxl-facebook'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="#"><i class='bx bxl-twitter'></i></a>
-                        <a href="#"><i class='bx bxl-youtube'></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>LIENS RAPIDES</h3>
+            .value-item i {
+                font-size: 2.5rem;
+                color: var(--primary-color);
+                margin-bottom: 1rem;
+            }
+
+            .value-item h3 {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.3rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+            }
+
+            .value-item p {
+                color: var(--text-light);
+                font-weight: 300;
+                font-size: 0.9rem;
+            }
+
+            .video-container {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .video-embed {
+                width: 100%;
+                height: 450px;
+                border: none;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                transition: var(--transition);
+                cursor: pointer;
+            }
+
+            .gallery img:hover {
+                transform: scale(1.02);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .team {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 3rem;
+            }
+
+            .team-member {
+                text-align: center;
+                background: var(--white);
+                padding: 2rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                border: 1px solid #f0f0f0;
+                transition: var(--transition);
+            }
+
+            .team-member:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .team-member img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                margin-bottom: 1rem;
+                border: 3px solid var(--primary-color);
+            }
+
+            .team-member h3 {
+                margin-bottom: 0.5rem;
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.3rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .team-member p {
+                color: var(--text-light);
+                margin-bottom: 1rem;
+                font-weight: 300;
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .team-social {
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .team-social a {
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--white);
+                transition: var(--transition);
+            }
+
+            .team-social a:hover {
+                background: var(--text-light);
+                transform: translateY(-3px);
+            }
+
+            .blog-posts {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+
+            .blog-post {
+                background: var(--white);
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                border: 1px solid #f0f0f0;
+                transition: var(--transition);
+            }
+
+            .blog-post:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .blog-post img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .blog-post-content {
+                padding: 1.5rem;
+            }
+
+            .blog-post-content h3 {
+                margin-bottom: 0.5rem;
+                font-family: "Cormorant Garamond", serif;
+                font-size: 1.2rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .blog-post-content .date {
+                color: var(--text-light);
+                font-size: 0.8rem;
+                margin-bottom: 1rem;
+                letter-spacing: 1px;
+            }
+
+            .blog-post-content p {
+                color: var(--text-light);
+                margin-bottom: 1rem;
+                font-weight: 300;
+                font-size: 0.9rem;
+            }
+
+            @media (max-width: 768px) {
+                .about-content {
+                    grid-template-columns: 1fr;
+                }
+
+                .page-hero h1 {
+                    font-size: 2rem;
+                    letter-spacing: 4px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img
+                        src="img/models academy.jpg"
+                        alt="Models Academy"
+                        class="logo-img"
+                        loading="eager"
+                    />
+                </a>
+                <nav>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="about.html">À propos</a></li>
-                        <li><a href="formations.html">Formations</a></li>
-                        <li><a href="mannequins.html">Mannequins</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li>
+                            <a href="about.html" class="active">À PROPOS</a>
+                        </li>
+                        <li><a href="formations.html">FORMATIONS</a></li>
+                        <li><a href="mannequins.html">MANNEQUINS</a></li>
+                        <li><a href="inscription.html">S'INSCRIRE</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>CONTACT</h3>
-                    <ul>
-                        <li><i class='bx bx-phone'></i> +229 69 89 69 50</li>
-                        <li><i class='bx bx-map'></i> Calavi Bidossessi, derrière la clôture de l'ORTB</li>
-                    </ul>
-                </div>
+                </nav>
+                <i class="bx bx-menu mobile-menu-btn"></i>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS RÉSERVÉS.</p>
-            </div>
-        </div>
-    </footer>
+        </header>
 
-    <script src="main.js"></script>
-</body>
+        <section class="page-hero">
+            <h1>À PROPOS DE NOUS</h1>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div>
+                        <img
+                            src="img/about.jpg"
+                            alt="Models Academy"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="about-text">
+                        <h3>NOTRE HISTOIRE</h3>
+                        <p>
+                            Fondée il y a plus de 15 ans, MODELS ACADEMY
+                            MANAGEMENT est devenue une référence dans le monde
+                            du mannequinat et de la formation professionnelle.
+                            Notre agence a vu naître et grandir des centaines de
+                            talents qui brillent aujourd'hui sur les podiums
+                            internationaux et dans les plus grands magazines de
+                            mode.
+                        </p>
+                        <p>
+                            Notre équipe, composée de professionnels chevronnés
+                            de l'industrie de la mode, met son expertise au
+                            service de chaque aspirant mannequin. Nous croyons
+                            que chaque personne possède un potentiel unique
+                            qu'il suffit de révéler et de cultiver.
+                        </p>
+                        <h3 style="margin-top: 2rem">NOS OBJECTIFS</h3>
+                        <p>
+                            Models Academy Management a pour mission de révéler
+                            et d'accompagner les talents les plus prometteurs
+                            vers l'excellence dans l'industrie de la mode. Nous
+                            croyons que chaque mannequin possède un potentiel
+                            unique qui mérite d'être développé avec
+                            professionnalisme et passion. Notre approche combine
+                            formation de haut niveau, accompagnement
+                            personnalisé et opportunités exceptionnelles sur les
+                            scènes nationales et internationales. Nous sommes
+                            dédiés à transformer les rêves en carrières durables
+                            et épanouissantes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="values">
+                    <div class="value-item">
+                        <i class="bx bx-trophy"></i>
+                        <h3>EXCELLENCE</h3>
+                        <p>
+                            Nous visons les plus hauts standards de qualité dans
+                            tous les aspects de notre travail et de nos
+                            formations.
+                        </p>
+                    </div>
+                    <div class="value-item">
+                        <i class="bx bx-heart"></i>
+                        <h3>PASSION</h3>
+                        <p>
+                            Notre amour pour la mode et le mannequinat guide
+                            chacune de nos actions et inspire nos talents.
+                        </p>
+                    </div>
+                    <div class="value-item">
+                        <i class="bx bx-group"></i>
+                        <h3>ACCOMPAGNEMENT</h3>
+                        <p>
+                            Un suivi personnalisé pour chaque mannequin, de la
+                            formation à la carrière
+                        </p>
+                    </div>
+                    <div class="value-item">
+                        <i class="bx bx-star"></i>
+                        <h3>INNOVATION</h3>
+                        <p>
+                            Des méthodes d'enseignement modernes adaptées aux
+                            tendances actuelles
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--secondary-color)">
+            <div class="container">
+                <h2 class="section-title">DÉCOUVREZ NOTRE UNIVERS</h2>
+                <div class="video-container">
+                    <p
+                        style="
+                            margin-bottom: 2rem;
+                            color: var(--text-light);
+                            font-weight: 300;
+                        "
+                    >
+                        Plongez dans les coulisses de MODELS ACADEMY et
+                        découvrez nos formations en action
+                    </p>
+                    <iframe
+                        class="video-embed"
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        title="Models Academy Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    >
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">NOTRE GALERIE</h2>
+                <div class="gallery">
+                    <img src="img/mathieu.jpg" alt="Galerie 1" loading="lazy" />
+                    <img src="img/olerie2.jpg" alt="Galerie 2" loading="lazy" />
+                    <img
+                        src="img/danielle.jpg"
+                        alt="Galerie 3"
+                        loading="lazy"
+                    />
+                    <img src="img/rita.jpeg" alt="Galerie 4" loading="lazy" />
+                    <img src="img/lucia7.jpg" alt="Galerie 5" loading="lazy" />
+                    <img src="img/aurelle.jpg" alt="Galerie 6" loading="lazy" />
+                    <img src="img/jediel.jpg" alt="Galerie 7" loading="lazy" />
+                    <img src="img/geordys.jpg" alt="Galerie 8" loading="lazy" />
+                    <img src="img/gildas.jpg" alt="Galerie 9" loading="lazy" />
+                    <img src="img/cyr2.jpg" alt="Galerie 10" loading="lazy" />
+                    <img src="img/joana.jpg" alt="Galerie 11" loading="lazy" />
+                    <img src="img/rose.jpg" alt="Galerie 12" loading="lazy" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--secondary-color)">
+            <div class="container">
+                <h2 class="section-title">NOTRE ÉQUIPE</h2>
+                <div class="team">
+                    <div class="team-member">
+                        <img
+                            src="img/gathi.jpg"
+                            alt="ore gauthier"
+                            loading="lazy"
+                        />
+                        <h3>ORE I GAUTHIER</h3>
+                        <p>DIRECTEUR & COACH</p>
+                        <div class="team-social">
+                            <a href="#"><i class="bx bxl-facebook"></i></a>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                            <a href="#"><i class="bx bx-globe"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img
+                            src="img/merveill.jpg"
+                            alt="merveille susuni"
+                            loading="lazy"
+                        />
+                        <h3>MERVEILLE S ATIMANGBO</h3>
+                        <p>COACH & DIRECTEUR ARTISTIQUE</p>
+                        <div class="team-social">
+                            <a href="#"><i class="bx bxl-facebook"></i></a>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                            <a href="#"><i class="bx bx-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">BLOG & ACTUALITÉS</h2>
+                <div class="blog-posts">
+                    <div class="blog-post">
+                        <a href="blog-article-1.html">
+                            <img
+                                src="img/about.jpg"
+                                alt="Article 1"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="blog-post-content">
+                            <div class="date">
+                                <i class="bx bx-calendar"></i> 15 NOVEMBRE 2024
+                            </div>
+                            <h3>LES TENDANCES DU MANNEQUINAT EN 2024</h3>
+                            <p>
+                                Découvrez les nouvelles tendances qui façonnent
+                                l'industrie du mannequinat cette année...
+                            </p>
+                            <a href="blog-article-1.html" class="btn"
+                                >LIRE PLUS</a
+                            >
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a href="blog-article-2.html">
+                            <img
+                                src="img/models academy.jpg"
+                                alt="Article 2"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="blog-post-content">
+                            <div class="date">
+                                <i class="bx bx-calendar"></i> 10 NOVEMBRE 2024
+                            </div>
+                            <h3>COMMENT RÉUSSIR SON PREMIER DÉFILÉ</h3>
+                            <p>
+                                Nos conseils d'experts pour aborder sereinement
+                                votre première expérience sur le podium...
+                            </p>
+                            <a href="blog-article-2.html" class="btn"
+                                >LIRE PLUS</a
+                            >
+                        </div>
+                    </div>
+                    <div class="blog-post">
+                        <a href="blog-article-3.html">
+                            <img
+                                src="img/about.jpg"
+                                alt="Article 3"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="blog-post-content">
+                            <div class="date">
+                                <i class="bx bx-calendar"></i> 5 NOVEMBRE 2024
+                            </div>
+                            <h3>LA PRÉPARATION DU BOOK PHOTO PARFAIT</h3>
+                            <p>
+                                Tous nos secrets pour créer un portfolio qui
+                                saura séduire les agences et clients...
+                            </p>
+                            <a href="blog-article-3.html" class="btn"
+                                >LIRE PLUS</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>MODELS ACADEMY</h3>
+                        <p>
+                            Votre partenaire pour une carrière réussie dans le
+                            mannequinat.
+                        </p>
+                        <div class="social-links">
+                            <a href="#"><i class="bx bxl-facebook"></i></a>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                            <a href="#"><i class="bx bxl-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>LIENS RAPIDES</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="formations.html">Formations</a></li>
+                            <li><a href="mannequins.html">Mannequins</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>CONTACT</h3>
+                        <ul>
+                            <li>
+                                <i class="bx bx-phone"></i> +229 69 89 69 50
+                            </li>
+                            <li>
+                                <i class="bx bx-map"></i> Calavi Bidossessi,
+                                derrière la clôture de l'ORTB
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS
+                        RÉSERVÉS.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
 </html>
