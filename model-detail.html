@@ -487,8 +487,19 @@
     <script>
         const models = modelsData;
 
+        // Support both normal URL (?id=1) and encoded URL (%3Fid=1) for local use
+        let modelId = null;
         const urlParams = new URLSearchParams(window.location.search);
-        const modelId = urlParams.get('id');
+        modelId = urlParams.get('id');
+        
+        // Fallback: check if URL contains encoded parameter (for local file access)
+        if (!modelId) {
+            const fullUrl = decodeURIComponent(window.location.href);
+            const match = fullUrl.match(/[?&]id=(\d+)/);
+            if (match) {
+                modelId = match[1];
+            }
+        }
         
         if (modelId && models[modelId]) {
             const model = models[modelId];
