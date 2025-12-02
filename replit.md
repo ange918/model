@@ -268,26 +268,42 @@ Novembre 2024
 - **Transitions Fluides** : Animations fadeIn sur le body et les images avec Intersection Observer
 - **Gestion Manuelle des Images** : Système configurable pour portfolio/fashion/shooting photos
 
-### Configuration des Images de Portfolio
+### Configuration des Images avec IBB.CO
 
-Dans `model-detail.html`, chaque mannequin possède trois tableaux configurables :
-- `portfolioPhotos` : Photos de portfolio
-- `fashionPhotos` : Photos de défilés
-- `shootingPhotos` : Photos de séances
+Le fichier `models-data.js` centralise toutes les donnees des mannequins et leurs images.
 
-Pour ajouter des images, insérez les chemins dans ces tableaux :
+**Comment utiliser les liens ibb.co :**
+
+1. Uploadez votre image sur https://imgbb.com/
+2. Apres l'upload, cliquez sur "Get codes" 
+3. Copiez le "Direct link" (lien direct), PAS le lien de la page
+   - Lien page (NE PAS UTILISER): `https://ibb.co/dwr9LTNc`
+   - Lien direct (A UTILISER): `https://i.ibb.co/xxxxx/nom-image.jpg`
+4. Collez ce lien dans `models-data.js`
+
+**Exemple dans models-data.js :**
 ```javascript
-portfolioPhotos: [
-    'images/mannequin_portfolio1.jpg',
-    'images/mannequin_portfolio2.jpg'
-],
-fashionPhotos: [
-    'images/mannequin_fashion1.jpg'
-],
-shootingPhotos: [
-    'images/mannequin_shooting1.jpg'
-]
+'1': {
+    name: 'TOUNDOH OLERIE',
+    photo: 'https://i.ibb.co/Jw2LMRG/portrait.jpg',  // Lien direct ibb.co
+    portfolioPhotos: [
+        'https://i.ibb.co/xxxxx/portfolio-1.jpg',
+        'https://i.ibb.co/xxxxx/portfolio-2.jpg',
+        'img/local-image.jpg'  // Ou image locale
+    ],
+    fashionPhotos: [
+        'https://i.ibb.co/xxxxx/fashion-1.jpg'
+    ],
+    shootingPhotos: [
+        'https://i.ibb.co/xxxxx/shooting-1.jpg'
+    ]
+}
 ```
+
+**Types de liens acceptes :**
+- Liens ibb.co directs: `https://i.ibb.co/xxxxx/image.jpg`
+- Images locales: `img/nom-image.jpg`
+- Autres hebergeurs (Unsplash, etc.)
 
 ## Notes Techniques
 

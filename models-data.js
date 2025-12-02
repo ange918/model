@@ -1,0 +1,961 @@
+/*
+=====================================================
+CONFIGURATION DES MANNEQUINS - MODELS ACADEMY
+=====================================================
+
+COMMENT UTILISER LES LIENS IBB.CO:
+1. Uploadez votre image sur https://imgbb.com/
+2. Copiez le "Lien direct" (pas le lien de la page)
+   - Lien page (NE PAS UTILISER): https://ibb.co/dwr9LTNc
+   - Lien direct (A UTILISER): https://i.ibb.co/xxxxx/nom-image.jpg
+3. Collez le lien direct dans les champs ci-dessous
+
+EXEMPLES DE LIENS VALIDES:
+- https://i.ibb.co/Jw2LMRG/portrait.jpg
+- https://i.ibb.co/3mJ4XYZ/shooting-1.jpg
+- img/local-image.jpg (pour images locales)
+
+=====================================================
+*/
+
+const modelsData = {
+    // ========== MANNEQUIN 1: TOUNDOH OLERIE ==========
+    '1': {
+        name: 'TOUNDOH OLERIE',
+        specialty: 'Podium',
+        photo: 'img/olerie2.jpg',
+        bio: 'Mannequin professionnelle specialisee en podium et defiles de mode.',
+        height: '1m75',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '84cm',
+        waist: '62cm',
+        hips: '89cm',
+        shoeSize: '39 EU',
+        portfolioPhotos: [
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg'
+        ],
+        fashionPhotos: [
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg'
+        ],
+        shootingPhotos: [
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg',
+            'img/olerie2.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 2: AZONWANOU RITA ==========
+    '2': {
+        name: 'AZONWANOU RITA',
+        specialty: 'Photo',
+        photo: 'img/rita.jpeg',
+        bio: 'Mannequin photo avec une grande expressivite devant l\'objectif.',
+        height: '1m72',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '86cm',
+        waist: '60cm',
+        hips: '90cm',
+        shoeSize: '38 EU',
+        portfolioPhotos: [
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg'
+        ],
+        fashionPhotos: [
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg'
+        ],
+        shootingPhotos: [
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg',
+            'img/rita.jpeg'
+        ]
+    },
+
+    // ========== MANNEQUIN 3: AGBEWANOU PRISCA ==========
+    '3': {
+        name: 'AGBEWANOU PRISCA',
+        specialty: 'Mixte',
+        photo: 'img/prisca.jpg',
+        bio: 'Mannequin polyvalente excellant aussi bien sur le podium que devant l\'objectif.',
+        height: '1m78',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '4 ans',
+        bust: '85cm',
+        waist: '62cm',
+        hips: '88cm',
+        shoeSize: '39 EU',
+        portfolioPhotos: [
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg'
+        ],
+        fashionPhotos: [
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg'
+        ],
+        shootingPhotos: [
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg',
+            'img/prisca.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 4: SENOU PAULA ==========
+    '4': {
+        name: 'SENOU PAULA',
+        specialty: 'Podium',
+        photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800',
+        bio: 'Mannequin professionnelle formee a Models Academy Management.',
+        height: '1m74',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '84cm',
+        waist: '60cm',
+        hips: '88cm',
+        shoeSize: '38 EU',
+        portfolioPhotos: [],
+        fashionPhotos: [],
+        shootingPhotos: []
+    },
+
+    // ========== MANNEQUIN 5: AGBOGNON JOANA ==========
+    '5': {
+        name: 'AGBOGNON JOANA',
+        specialty: 'Podium',
+        photo: 'img/joana.jpg',
+        bio: 'Mannequin professionnelle formee a Models Academy Management.',
+        height: '1m76',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '85cm',
+        waist: '61cm',
+        hips: '89cm',
+        shoeSize: '38 EU',
+        portfolioPhotos: [
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg'
+        ],
+        fashionPhotos: [
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg'
+        ],
+        shootingPhotos: [
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg',
+            'img/joana.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 6: EDJO AURELLE ==========
+    '6': {
+        name: 'EDJO AURELLE',
+        specialty: 'Podium',
+        photo: 'img/aurelle.jpg',
+        bio: 'Mannequin professionnelle formee a Models Academy Management.',
+        height: '1m73',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '84cm',
+        waist: '60cm',
+        hips: '88cm',
+        shoeSize: '38 EU',
+        portfolioPhotos: [
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg'
+        ],
+        fashionPhotos: [
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg'
+        ],
+        shootingPhotos: [
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg',
+            'img/aurelle.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 7: GBAGUIDI DANIELLE ==========
+    '7': {
+        name: 'GBAGUIDI DANIELLE',
+        specialty: 'Photo',
+        photo: 'img/danielle.jpg',
+        bio: 'Mannequin photo avec un talent naturel devant la camera.',
+        height: '1m70',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '83cm',
+        waist: '59cm',
+        hips: '87cm',
+        shoeSize: '37 EU',
+        portfolioPhotos: [
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg'
+        ],
+        fashionPhotos: [
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg'
+        ],
+        shootingPhotos: [
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg',
+            'img/danielle.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 8: LUCIA PADONOU ==========
+    '8': {
+        name: 'LUCIA PADONOU',
+        specialty: 'Mixte',
+        photo: 'img/lucia7.jpg',
+        bio: 'Mannequin polyvalente avec une presence remarquable.',
+        height: '1m77',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '4 ans',
+        bust: '86cm',
+        waist: '62cm',
+        hips: '90cm',
+        shoeSize: '39 EU',
+        portfolioPhotos: [
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg'
+        ],
+        fashionPhotos: [
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg'
+        ],
+        shootingPhotos: [
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg',
+            'img/lucia7.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 9: KHADY TRAORE ==========
+    '9': {
+        name: 'KHADY TRAORE',
+        specialty: 'Podium',
+        photo: 'https://images.unsplash.com/photo-1485893226355-9a1c32a0c81e?w=800',
+        bio: 'Mannequin professionnelle formee a Models Academy Management.',
+        height: '1m75',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '85cm',
+        waist: '61cm',
+        hips: '89cm',
+        shoeSize: '38 EU',
+        portfolioPhotos: [],
+        fashionPhotos: [],
+        shootingPhotos: []
+    },
+
+    // ========== MANNEQUIN 10: HOUDJREGBO ROSE ==========
+    '10': {
+        name: 'HOUDJREGBO ROSE',
+        specialty: 'Podium',
+        photo: 'img/rose.jpg',
+        bio: 'Mannequin professionnelle formee a Models Academy Management.',
+        height: '1m74',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '84cm',
+        waist: '60cm',
+        hips: '88cm',
+        shoeSize: '38 EU',
+        portfolioPhotos: [
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg'
+        ],
+        fashionPhotos: [
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg'
+        ],
+        shootingPhotos: [
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg',
+            'img/rose.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 11: MISSIHOUN MERVEILLE ==========
+    '11': {
+        name: 'MISSIHOUN MERVEILLE',
+        specialty: 'Podium',
+        photo: 'img/merveille.jpg',
+        bio: 'Mannequin professionnelle formee a Models Academy Management.',
+        height: '1m76',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '85cm',
+        waist: '61cm',
+        hips: '89cm',
+        shoeSize: '39 EU',
+        portfolioPhotos: [
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg'
+        ],
+        fashionPhotos: [
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg'
+        ],
+        shootingPhotos: [
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg',
+            'img/merveille.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 12: DATO MARIE-MICHELLE ==========
+    '12': {
+        name: 'DATO MARIE-MICHELLE',
+        specialty: 'Podium',
+        photo: 'img/michelle.jpg',
+        bio: 'Mannequin professionnelle formee a Models Academy Management.',
+        height: '1m75',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '84cm',
+        waist: '60cm',
+        hips: '88cm',
+        shoeSize: '38 EU',
+        portfolioPhotos: [
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg'
+        ],
+        fashionPhotos: [
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg'
+        ],
+        shootingPhotos: [
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg',
+            'img/michelle.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 13: AKPO MATTHIEU ==========
+    '13': {
+        name: 'AKPO MATTHIEU',
+        specialty: 'Podium',
+        photo: 'img/mathieu.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m82',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '96cm',
+        waist: '78cm',
+        hips: '94cm',
+        shoeSize: '43 EU',
+        portfolioPhotos: [
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg'
+        ],
+        fashionPhotos: [
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg'
+        ],
+        shootingPhotos: [
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg',
+            'img/mathieu.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 14: YEHOUN BARNARD ==========
+    '14': {
+        name: 'YEHOUN BARNARD',
+        specialty: 'Podium',
+        photo: 'img/barnard2.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m85',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '4 ans',
+        bust: '98cm',
+        waist: '80cm',
+        hips: '96cm',
+        shoeSize: '44 EU',
+        portfolioPhotos: [
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg'
+        ],
+        fashionPhotos: [
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg'
+        ],
+        shootingPhotos: [
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg',
+            'img/barnard2.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 15: AMAH RODERIC ==========
+    '15': {
+        name: 'AMAH RODERIC',
+        specialty: 'Podium',
+        photo: 'img/roderic.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m83',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '95cm',
+        waist: '77cm',
+        hips: '93cm',
+        shoeSize: '42 EU',
+        portfolioPhotos: [
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg'
+        ],
+        fashionPhotos: [
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg'
+        ],
+        shootingPhotos: [
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg',
+            'img/roderic.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 16: HESSOU CYR-GOD ==========
+    '16': {
+        name: 'HESSOU CYR-GOD',
+        specialty: 'Podium',
+        photo: 'img/cyr2.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m84',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '97cm',
+        waist: '79cm',
+        hips: '95cm',
+        shoeSize: '43 EU',
+        portfolioPhotos: [
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg'
+        ],
+        fashionPhotos: [
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg'
+        ],
+        shootingPhotos: [
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg',
+            'img/cyr2.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 17: FAMIWA DALIL ==========
+    '17': {
+        name: 'FAMIWA DALIL',
+        specialty: 'Podium',
+        photo: 'img/dalil.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m81',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '94cm',
+        waist: '76cm',
+        hips: '92cm',
+        shoeSize: '42 EU',
+        portfolioPhotos: [
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg'
+        ],
+        fashionPhotos: [
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg'
+        ],
+        shootingPhotos: [
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg',
+            'img/dalil.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 18: SAGBO AMEN ==========
+    '18': {
+        name: 'SAGBO AMEN',
+        specialty: 'Podium',
+        photo: 'https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m80',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '95cm',
+        waist: '77cm',
+        hips: '93cm',
+        shoeSize: '43 EU',
+        portfolioPhotos: [],
+        fashionPhotos: [],
+        shootingPhotos: []
+    },
+
+    // ========== MANNEQUIN 19: MIDJINDOU GILDAS ==========
+    '19': {
+        name: 'MIDJINDOU GILDAS',
+        specialty: 'Podium',
+        photo: 'img/gildas.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m86',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '4 ans',
+        bust: '99cm',
+        waist: '81cm',
+        hips: '97cm',
+        shoeSize: '44 EU',
+        portfolioPhotos: [
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg'
+        ],
+        fashionPhotos: [
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg'
+        ],
+        shootingPhotos: [
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg',
+            'img/gildas.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 20: HOUNGBEDJI ABOU-BACAR ==========
+    '20': {
+        name: 'HOUNGBEDJI ABOU-BACAR',
+        specialty: 'Podium',
+        photo: 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=800',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m82',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '96cm',
+        waist: '78cm',
+        hips: '94cm',
+        shoeSize: '43 EU',
+        portfolioPhotos: [],
+        fashionPhotos: [],
+        shootingPhotos: []
+    },
+
+    // ========== MANNEQUIN 21: GBEDEGLA GEORDYS ==========
+    '21': {
+        name: 'GBEDEGLA GEORDYS',
+        specialty: 'Podium',
+        photo: 'img/geordys.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m84',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '97cm',
+        waist: '79cm',
+        hips: '95cm',
+        shoeSize: '43 EU',
+        portfolioPhotos: [
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg'
+        ],
+        fashionPhotos: [
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg'
+        ],
+        shootingPhotos: [
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg',
+            'img/geordys.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 22: VODOUNON JEDIEL ==========
+    '22': {
+        name: 'VODOUNON JEDIEL',
+        specialty: 'Podium',
+        photo: 'img/jediel.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m83',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '95cm',
+        waist: '77cm',
+        hips: '93cm',
+        shoeSize: '42 EU',
+        portfolioPhotos: [
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg'
+        ],
+        fashionPhotos: [
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg'
+        ],
+        shootingPhotos: [
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg',
+            'img/jediel.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 23: TOSSOU RAFIOU HONEL ==========
+    '23': {
+        name: 'TOSSOU RAFIOU HONEL',
+        specialty: 'Podium',
+        photo: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m81',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '94cm',
+        waist: '76cm',
+        hips: '92cm',
+        shoeSize: '42 EU',
+        portfolioPhotos: [],
+        fashionPhotos: [],
+        shootingPhotos: []
+    },
+
+    // ========== MANNEQUIN 24: ADANTOLANKPE PASCAL ==========
+    '24': {
+        name: 'ADANTOLANKPE PASCAL',
+        specialty: 'Podium',
+        photo: 'img/pascal.jpg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m85',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '4 ans',
+        bust: '98cm',
+        waist: '80cm',
+        hips: '96cm',
+        shoeSize: '44 EU',
+        portfolioPhotos: [
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg'
+        ],
+        fashionPhotos: [
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg'
+        ],
+        shootingPhotos: [
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg',
+            'img/pascal.jpg'
+        ]
+    },
+
+    // ========== MANNEQUIN 25: SEKPO MESHACK ==========
+    '25': {
+        name: 'SEKPO MESHACK',
+        specialty: 'Podium',
+        photo: 'img/meshac.jpeg',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m82',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '2 ans',
+        bust: '96cm',
+        waist: '78cm',
+        hips: '94cm',
+        shoeSize: '43 EU',
+        portfolioPhotos: [
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg'
+        ],
+        fashionPhotos: [
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg'
+        ],
+        shootingPhotos: [
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg',
+            'img/meshac.jpeg'
+        ]
+    },
+
+    // ========== MANNEQUIN 26: YAO TAMEWA NERI ==========
+    '26': {
+        name: 'YAO TAMEWA NERI',
+        specialty: 'Podium',
+        photo: 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=800',
+        bio: 'Mannequin professionnel forme a Models Academy Management.',
+        height: '1m80',
+        hair: 'Noir',
+        eyes: 'Marron',
+        city: 'Cotonou',
+        experience: '3 ans',
+        bust: '95cm',
+        waist: '77cm',
+        hips: '93cm',
+        shoeSize: '43 EU',
+        portfolioPhotos: [],
+        fashionPhotos: [],
+        shootingPhotos: []
+    }
+};

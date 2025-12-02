@@ -1,6 +1,6 @@
 import http.server
 import socketserver
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 
 PORT = 5000
 
@@ -12,12 +12,17 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
     def do_GET(self):
-        parsed = urlparse(self.path)
-        path = parsed.path
-        if path == '/':
+        decoded_path = unquote(self.path)
+        if '?' in decoded_path:
+            path_part = decoded_path.split('?')[0]
+        else:
+            parsed = urlparse(decoded_path)
+            path_part = parsed.path
+        
+        if path_part == '/':
             self.path = '/index.html'
         else:
-            self.path = path
+            self.path = path_part
         return super().do_GET()
 
 socketserver.TCPServer.allow_reuse_address = True
