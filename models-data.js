@@ -51,7 +51,7 @@ const modelsData = {
             'img/olerie2.jpg'
         ],
         shootingPhotos: [
-            'img/olerie2.jpg',
+            'https://i.ibb.co/PvNp9L2Y/shoot8.jpg',
             'img/olerie2.jpg',
             'img/olerie2.jpg',
             'img/olerie2.jpg',
