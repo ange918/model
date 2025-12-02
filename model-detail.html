@@ -164,7 +164,15 @@
         .galleries-section {
             margin-top: 60px;
             grid-column: 1 / -1;
-            width: 100%;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            padding: 40px 20px;
+            background: #f9f9f9;
+        }
+        
+        .galleries-inner {
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
         .gallery-tabs {
@@ -396,30 +404,32 @@
             </div>
             
             <div class="galleries-section">
-                <h2 class="section-title">GALERIES</h2>
-                
-                <div class="gallery-tabs">
-                    <button class="gallery-tab active" data-gallery="portfolio">
-                        <i class='bx bx-image'></i> PORTFOLIO
-                    </button>
-                    <button class="gallery-tab" data-gallery="fashion">
-                        <i class='bx bx-walk'></i> FASHION SHOW
-                    </button>
-                    <button class="gallery-tab" data-gallery="shooting">
-                        <i class='bx bx-camera'></i> SHOOTING
-                    </button>
-                </div>
-                
-                <div class="gallery-content active" id="portfolio-gallery">
-                    <div class="gallery-grid" id="portfolioGrid"></div>
-                </div>
-                
-                <div class="gallery-content" id="fashion-gallery">
-                    <div class="gallery-grid" id="fashionGrid"></div>
-                </div>
-                
-                <div class="gallery-content" id="shooting-gallery">
-                    <div class="gallery-grid" id="shootingGrid"></div>
+                <div class="galleries-inner">
+                    <h2 class="section-title">GALERIES</h2>
+                    
+                    <div class="gallery-tabs">
+                        <button class="gallery-tab active" data-gallery="portfolio">
+                            <i class='bx bx-image'></i> PORTFOLIO
+                        </button>
+                        <button class="gallery-tab" data-gallery="fashion">
+                            <i class='bx bx-walk'></i> FASHION SHOW
+                        </button>
+                        <button class="gallery-tab" data-gallery="shooting">
+                            <i class='bx bx-camera'></i> SHOOTING
+                        </button>
+                    </div>
+                    
+                    <div class="gallery-content active" id="portfolio-gallery">
+                        <div class="gallery-grid" id="portfolioGrid"></div>
+                    </div>
+                    
+                    <div class="gallery-content" id="fashion-gallery">
+                        <div class="gallery-grid" id="fashionGrid"></div>
+                    </div>
+                    
+                    <div class="gallery-content" id="shooting-gallery">
+                        <div class="gallery-grid" id="shootingGrid"></div>
+                    </div>
                 </div>
             </div>
         </div>
