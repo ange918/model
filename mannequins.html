@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOS MANNEQUINS - MODELS ACADEMY MANAGEMENT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+        
+        .models-hero {
+            padding: 120px 20px 40px;
+            text-align: center;
+            background: #ffffff;
+        }
+        
+        .models-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 8px;
+            color: #000000;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .models-hero p {
+            color: #666666;
+            font-size: 0.9rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin: 40px auto 50px;
+            max-width: 500px;
+            border: 1px solid #000000;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 15px 30px;
+            background: #ffffff;
+            color: #000000;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .tab-btn:not(:last-child) {
+            border-right: 1px solid #000000;
+        }
+        
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .models-section {
+            padding: 20px 20px 100px;
+        }
+        
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .model-card {
+            background: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .model-card.hidden {
+            display: none;
+        }
+        
+        .model-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .model-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background: #f5f5f5;
+            filter: grayscale(0%);
+            transition: filter 0.3s ease;
+        }
+        
+        .model-info {
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .model-info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #000000;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .model-specialty {
+            font-size: 0.75rem;
+            color: #666666;
+            margin-bottom: 15px;
+            display: block;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        
+        .model-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 30px;
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        .model-btn:hover {
+            background: #333333;
+        }
+        
+        .model-btn i {
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 968px) {
+            .models-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .models-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                max-width: 400px;
+            }
+            
+            .models-hero h1 {
+                font-size: 2rem;
+                letter-spacing: 4px;
+            }
+            
+            .model-image {
+                height: 450px;
+            }
+            
+            .tabs-container {
+                flex-direction: column;
+                max-width: 300px;
+            }
+            
+            .tab-btn:not(:last-child) {
+                border-right: none;
+                border-bottom: 1px solid #000000;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/models academy.jpg" alt="Models Academy" class="logo-img" loading="eager">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="about.html">À PROPOS</a></li>
+                    <li><a href="formations.html">FORMATIONS</a></li>
+                    <li><a href="mannequins.html" class="active">MANNEQUINS</a></li>
+                    <li><a href="inscription.html">S'INSCRIRE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <i class='bx bx-menu mobile-menu-btn'></i>
+        </div>
+    </header>
+
+    <section class="models-hero">
+        <h1>NOS MANNEQUINS</h1>
+        <p>Découvrez les talents exceptionnels qui composent notre agence et qui brillent sur les podiums</p>
+    </section>
+
+    <div class="tabs-container">
+        <button class="tab-btn active" data-filter="all">TOUT</button>
+        <button class="tab-btn" data-filter="femme">FEMME</button>
+        <button class="tab-btn" data-filter="homme">HOMME</button>
+    </div>
+
+    <section class="models-section">
+        <div class="models-grid">
+            <!-- FEMMES -->
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=1'">
+                <img src="img/olerie2.jpg" alt="Toundoh Olerie" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>TOUNDOH OLERIE</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=1" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=2'">
+                <img src="img/rita.jpeg" alt="Azonwanou Rita" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>AZONWANOU RITA</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=2" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=8'">
+                <img src="img/lucia7.jpg" alt="Lucia Padonou" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>LUCIA PADONOU</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=8" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=4'">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800" alt="Senou Paula" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>SENOU PAULA</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=4" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=5'">
+                <img src="img/joana.jpg" alt="Agbognon Joana" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>AGBOGNON JOANA</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=5" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=6'">
+                <img src="img/aurelle.jpg" alt="Edjo Aurelle" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>EDJO AURELLE</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=6" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=7'">
+                <img src="img/danielle.jpg" alt="Gbaguidi Danielle" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>GBAGUIDI DANIELLE</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=7" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=3'">
+                <img src="img/prisca.jpg" alt="Agbewanou Prisca" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>AGBEWANOU PRISCA</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=3" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=9'">
+                <img src="https://images.unsplash.com/photo-1485893226355-9a1c32a0c81e?w=800" alt="Khady Traoré" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>KHADY TRAORÉ</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=9" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=10'">
+                <img src="img/rose.jpg" alt="Houdjregbo Rose" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>HOUDJREGBO ROSE</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=10" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=11'">
+                <img src="img/merveille.jpg" alt="Missihoun Merveille" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>MISSIHOUN MERVEILLE</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=11" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="femme" onclick="window.location.href='model-detail.html?id=12'">
+                <img src="img/michelle.jpg" alt="Dato Marie-Michèlle" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>DATO MARIE-MICHÈLLE</h3>
+                    <span class="model-specialty">MANNEQUIN FEMME</span>
+                    <a href="model-detail.html?id=12" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <!-- HOMMES -->
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=13'">
+                <img src="img/mathieu.jpg" alt="Akpo Matthieu" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>AKPO MATTHIEU</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=13" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=14'">
+                <img src="img/barnard2.jpg" alt="Yehoun Barnard" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>YEHOUN BARNARD</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=14" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=15'">
+                <img src="img/roderic.jpg" alt="Amah Roderic" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>AMAH RODERIC</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=15" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=16'">
+                <img src="img/cyr2.jpg" alt="Hessou Cyr-God" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>HESSOU CYR-GOD</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=16" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=17'">
+                <img src="img/dalil.jpg" alt="Famiwa Dalil" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>FAMIWA DALIL</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=17" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=18'">
+                <img src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=800" alt="Sagbo Amen" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>SAGBO AMEN</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=18" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=19'">
+                <img src="img/gildas.jpg" alt="Midjindou Gildas" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>MIDJINDOU GILDAS</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=19" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=20'">
+                <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=800" alt="Houngbedji Abou-Bacar" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>HOUNGBEDJI ABOU-BACAR</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=20" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=21'">
+                <img src="img/geordys.jpg" alt="Gbedegla Geordys" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>GBEDEGLA GEORDYS</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=21" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=22'">
+                <img src="img/jediel.jpg" alt="Vodounon Jédiel" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>VODOUNON JÉDIEL</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=22" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=23'">
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800" alt="Tossou Rafiou Honel" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>TOSSOU RAFIOU HONEL</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=23" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=24'">
+                <img src="img/pascal.jpg" alt="Adantolankpe Pascal" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>ADANTOLANKPE PASCAL</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=24" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=25'">
+                <img src="img/meshac.jpeg" alt="Sekpo Meshack" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>SEKPO MESHACK</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=25" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+
+            <div class="model-card" data-gender="homme" onclick="window.location.href='model-detail.html?id=26'">
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=800" alt="Yao Tamewa Neri" class="model-image" loading="lazy">
+                <div class="model-info">
+                    <h3>YAO TAMEWA NERI</h3>
+                    <span class="model-specialty">MANNEQUIN HOMME</span>
+                    <a href="model-detail.html?id=26" class="model-btn">
+                        <i class='bx bx-plus-circle'></i> EN SAVOIR PLUS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MODELS ACADEMY</h3>
+                    <p>Votre partenaire pour une carrière réussie dans le mannequinat.</p>
+                    <div class="social-links">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>LIENS RAPIDES</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="formations.html">Formations</a></li>
+                        <li><a href="mannequins.html">Mannequins</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTACT</h3>
+                    <ul>
+                        <li><i class='bx bx-phone'></i> +229 69 89 69 50</li>
+                        <li><i class='bx bx-map'></i> Calavi Bidossessi, derrière la clôture de l'ORTB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const modelCards = document.querySelectorAll('.model-card');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    modelCards.forEach(card => {
+                        const gender = card.getAttribute('data-gender');
+                        
+                        if (filter === 'all') {
+                            card.classList.remove('hidden');
+                        } else if (gender === filter) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

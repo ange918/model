@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MODELS ACADEMY MANAGEMENT - AGENCE DE MANNEQUINS</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="img/models academy.jpg" alt="Models Academy" class="logo-img" loading="eager">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">ACCUEIL</a></li>
+                        <li><a href="about.html">À PROPOS</a></li>
+                        <li><a href="formations.html">FORMATIONS</a></li>
+                        <li><a href="mannequins.html">MANNEQUINS</a></li>
+                        <li><a href="inscription.html">S'INSCRIRE</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <i class="bx bx-menu mobile-menu-btn"></i>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>MODELS ACADEMY MANAGEMENT</h1>
+                <p>Devenez le mannequin que vous rêvez d'être</p>
+                <div
+                    style="
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: center;
+                        margin-top: 2rem;
+                    "
+                >
+                    <a href="formations.html" class="btn"
+                        >VOIR NOS FORMATIONS</a
+                    >
+                    <a href="inscription.html" class="btn btn-secondary"
+                        >INSCRIPTION</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--secondary-color)">
+            <div class="container">
+                <h2 class="section-title">À PROPOS DE NOUS</h2>
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 3rem;
+                        align-items: center;
+                        max-width: 1000px;
+                        margin: 0 auto;
+                    "
+                >
+                    <div>
+                        <img
+                            src="img/models academy.jpg"
+                            alt="À propos de Models Academy"
+                            loading="lazy"
+                            style="
+                                width: 100%;
+                                height: 400px;
+                                object-fit: cover;
+                            "
+                        />
+                    </div>
+                    <div style="text-align: left">
+                        <p
+                            style="
+                                font-size: 1rem;
+                                line-height: 1.8;
+                                margin-bottom: 2rem;
+                                color: var(--text-light);
+                                font-weight: 300;
+                            "
+                        >
+                            MODELS ACADEMY MANAGEMENT est une agence de
+                            mannequins de renom qui se consacre à former et
+                            développer les talents de demain. Avec des années
+                            d'expérience dans l'industrie de la mode, nous
+                            offrons des programmes de formation complets pour
+                            les mannequins de podium, les modèles photo et le
+                            développement personnel.
+                        </p>
+                        <a href="about.html" class="btn">EN SAVOIR PLUS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">NOS STATISTIQUES</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <i class="bx bx-user"></i>
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">MANNEQUINS FORMÉS</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bx bx-walk"></i>
+                        <div class="stat-number" data-target="250">0</div>
+                        <div class="stat-label">DÉFILÉS RÉALISÉS</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bx bx-camera"></i>
+                        <div class="stat-number" data-target="800">0</div>
+                        <div class="stat-label">PROJETS PHOTOS</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bx bx-trophy"></i>
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label">ANNÉES D'EXPÉRIENCE</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--secondary-color)">
+            <div class="container">
+                <h2 class="section-title">NOS FORMATIONS</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img
+                            src="img/models academy.jpg"
+                            alt="Mannequin Podium"
+                            loading="lazy"
+                        />
+                        <div class="card-content">
+                            <h3><i class="bx bx-walk"></i> MANNEQUIN PODIUM</h3>
+                            <p>
+                                Maîtrisez l'art de la démarche, de la
+                                présentation et de la présence scénique.
+                                Apprenez les techniques professionnelles du
+                                défilé.
+                            </p>
+                            <a href="formations.html#podium" class="btn"
+                                >EN SAVOIR PLUS</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="img/about.jpg"
+                            alt="Model Photo"
+                            loading="lazy"
+                        />
+                        <div class="card-content">
+                            <h3><i class="bx bx-camera"></i> MODEL PHOTO</h3>
+                            <p>
+                                Développez votre portfolio et apprenez les
+                                poses, expressions et techniques spécifiques à
+                                la photographie de mode.
+                            </p>
+                            <a href="formations.html#photo" class="btn"
+                                >EN SAVOIR PLUS</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="img/models academy.jpg"
+                            alt="Développement Personnel"
+                            loading="lazy"
+                        />
+                        <div class="card-content">
+                            <h3>
+                                <i class="bx bx-brain"></i> DÉVELOPPEMENT
+                                PERSONNEL
+                            </h3>
+                            <p>
+                                Développez votre confiance en vous, votre
+                                charisme et votre présence pour briller dans
+                                l'industrie de la mode.
+                            </p>
+                            <a href="formations.html#developpement" class="btn"
+                                >EN SAVOIR PLUS</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">QUESTIONS FRÉQUENTES</h2>
+                <div class="faq">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span
+                                >QUELLES SONT LES CONDITIONS D'ADMISSION ?</span
+                            >
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Nous acceptons les candidats âgés de 16 à 30
+                                ans, hommes et femmes. Une bonne condition
+                                physique et une motivation sincère sont
+                                essentielles. Aucune expérience préalable n'est
+                                requise.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>QUELLE EST LA DURÉE DES FORMATIONS ?</span>
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Nos formations varient de 3 à 6 mois selon le
+                                programme choisi. Nous proposons également des
+                                formations intensives sur des périodes plus
+                                courtes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span
+                                >PROPOSEZ-VOUS DES FACILITÉS DE PAIEMENT ?</span
+                            >
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Oui, nous offrons plusieurs options de paiement
+                                incluant des paiements échelonnés sur 3, 6 ou 12
+                                mois pour faciliter l'accès à nos formations.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>QUE SE PASSE-T-IL APRÈS LA FORMATION ?</span>
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Nous accompagnons nos mannequins dans leur
+                                carrière professionnelle en les mettant en
+                                contact avec des agences partenaires et en les
+                                aidant à constituer leur book professionnel.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--secondary-color)">
+            <div class="container">
+                <h2 class="section-title">NOTRE BLOG</h2>
+                <div class="cards">
+                    <div class="card">
+                        <a href="blog-article-1.html">
+                            <img
+                                src="img/about.jpg"
+                                alt="Tendances Mannequinat"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="card-content">
+                            <span
+                                style="
+                                    font-size: 0.75rem;
+                                    color: var(--text-light);
+                                    letter-spacing: 1px;
+                                "
+                                >15 NOVEMBRE 2024</span
+                            >
+                            <h3 style="font-size: 1.1rem; margin: 0.5rem 0">
+                                LES TENDANCES DU MANNEQUINAT EN 2024
+                            </h3>
+                            <p>
+                                Découvrez les nouvelles tendances qui façonnent
+                                l'industrie du mannequinat cette année.
+                            </p>
+                            <a href="blog-article-1.html" class="btn" style="margin-top: 1rem"
+                                >LIRE L'ARTICLE</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a href="blog-article-2.html">
+                            <img
+                                src="img/models academy.jpg"
+                                alt="Premier Défilé"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="card-content">
+                            <span
+                                style="
+                                    font-size: 0.75rem;
+                                    color: var(--text-light);
+                                    letter-spacing: 1px;
+                                "
+                                >10 NOVEMBRE 2024</span
+                            >
+                            <h3 style="font-size: 1.1rem; margin: 0.5rem 0">
+                                COMMENT RÉUSSIR SON PREMIER DÉFILÉ
+                            </h3>
+                            <p>
+                                Nos conseils d'experts pour aborder sereinement
+                                votre première expérience sur le podium.
+                            </p>
+                            <a href="blog-article-2.html" class="btn" style="margin-top: 1rem"
+                                >LIRE L'ARTICLE</a
+                            >
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a href="blog-article-3.html">
+                            <img
+                                src="img/about.jpg"
+                                alt="Book Photo"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="card-content">
+                            <span
+                                style="
+                                    font-size: 0.75rem;
+                                    color: var(--text-light);
+                                    letter-spacing: 1px;
+                                "
+                                >5 NOVEMBRE 2024</span
+                            >
+                            <h3 style="font-size: 1.1rem; margin: 0.5rem 0">
+                                LA PRÉPARATION DU BOOK PHOTO PARFAIT
+                            </h3>
+                            <p>
+                                Tous nos secrets pour créer un portfolio qui
+                                saura séduire les agences et clients.
+                            </p>
+                            <a href="blog-article-3.html" class="btn" style="margin-top: 1rem"
+                                >LIRE L'ARTICLE</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="section"
+            style="
+                background: var(--primary-color);
+                text-align: center;
+                color: var(--white);
+            "
+        >
+            <div class="container">
+                <h2
+                    style="
+                        font-family: &quot;Cormorant Garamond&quot;, serif;
+                        font-size: 2.5rem;
+                        font-weight: 300;
+                        margin-bottom: 1rem;
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                    "
+                >
+                    PRÊT À COMMENCER VOTRE CARRIÈRE ?
+                </h2>
+                <p
+                    style="
+                        font-size: 1rem;
+                        margin-bottom: 2rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                    "
+                >
+                    Inscrivez-vous dès maintenant et rejoignez notre académie
+                </p>
+                <a
+                    href="inscription.html"
+                    class="btn"
+                    style="
+                        background: var(--white);
+                        color: var(--primary-color);
+                    "
+                    >S'INSCRIRE MAINTENANT</a
+                >
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>MODELS ACADEMY & MANAGEMENT</h3>
+                        <p>
+                            Votre partenaire pour une carrière réussie dans le
+                            mannequinat.
+                        </p>
+                        <div class="social-links">
+                            <a href="#"><i class="bx bxl-facebook"></i></a>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                            <a href="#"><i class="bx bxl-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>LIENS RAPIDES</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="formations.html">Formations</a></li>
+                            <li><a href="mannequins.html">Mannequins</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>CONTACT</h3>
+                        <ul>
+                            <li>
+                                <i class="bx bx-phone"></i> +229 69 89 69 50
+                            </li>
+                            <li>
+                                <i class="bx bx-map"></i> Calavi Bidossessi,
+                                derrière la clôture de l'ORTB
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS
+                        RÉSERVÉS.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Réussir Son Premier Défilé - MODELS ACADEMY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+        }
+        
+        .article-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1600') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 70px;
+        }
+        
+        .article-hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .article-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .article-content p {
+            font-size: 1rem;
+            line-height: 2;
+            color: #333333;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        
+        .article-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #000000;
+            margin: 50px 0 25px;
+            letter-spacing: 2px;
+        }
+        
+        .article-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #000000;
+            margin: 35px 0 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .article-content li {
+            font-size: 1rem;
+            line-height: 2;
+            color: #333333;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin: 40px 0;
+        }
+        
+        .article-quote {
+            border-left: 3px solid #000000;
+            padding: 20px 30px;
+            margin: 40px 0;
+            background: #f9f9f9;
+            font-style: italic;
+        }
+        
+        .article-quote p {
+            font-size: 1.1rem;
+            color: #555555;
+            margin: 0;
+        }
+        
+        .tip-box {
+            background: #000000;
+            color: #ffffff;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .tip-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .tip-box p {
+            color: #ffffff;
+            margin: 0;
+        }
+        
+        .share-section {
+            border-top: 1px solid #e5e5e5;
+            padding-top: 40px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .share-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .share-btn {
+            width: 45px;
+            height: 45px;
+            border: 1px solid #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #000000;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .related-articles {
+            background: #f5f5f5;
+            padding: 60px 20px;
+        }
+        
+        .related-articles h3 {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        
+        .related-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .related-card {
+            background: #ffffff;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease;
+        }
+        
+        .related-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .related-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .related-card-content {
+            padding: 20px;
+        }
+        
+        .related-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .related-card .date {
+            font-size: 0.8rem;
+            color: #999999;
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .back-to-blog:hover {
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .article-hero h1 {
+                font-size: 1.8rem;
+                letter-spacing: 3px;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/models academy.jpg" alt="Models Academy" class="logo-img" loading="eager">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="about.html">À PROPOS</a></li>
+                    <li><a href="formations.html">FORMATIONS</a></li>
+                    <li><a href="mannequins.html">MANNEQUINS</a></li>
+                    <li><a href="inscription.html">S'INSCRIRE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <i class='bx bx-menu mobile-menu-btn'></i>
+        </div>
+    </header>
+
+    <section class="article-hero">
+        <div class="article-hero-content">
+            <h1>Comment Réussir Son Premier Défilé</h1>
+            <div class="article-meta">
+                <span><i class='bx bx-calendar'></i> 10 Novembre 2024</span>
+                <span><i class='bx bx-time'></i> 10 min de lecture</span>
+                <span><i class='bx bx-user'></i> Par Marc Dubois</span>
+            </div>
+        </div>
+    </section>
+
+    <article class="article-content">
+        <a href="about.html#blog" class="back-to-blog">
+            <i class='bx bx-arrow-back'></i> RETOUR AU BLOG
+        </a>
+
+        <p>Votre premier défilé approche et vous ressentez un mélange d'excitation et d'appréhension ? C'est parfaitement normal. Chez Models Academy Management, nous avons accompagné des centaines de mannequins lors de leurs débuts. Voici nos conseils d'experts pour aborder sereinement cette expérience unique.</p>
+
+        <h2>Avant le Jour J : La Préparation</h2>
+        
+        <h3>1. Maîtrisez votre démarche</h3>
+        
+        <p>La démarche est votre signature sur le podium. Elle doit être fluide, assurée et naturelle. Voici les points essentiels à travailler :</p>
+        
+        <ul>
+            <li>Gardez le dos droit et les épaules légèrement en arrière</li>
+            <li>Marchez en plaçant un pied devant l'autre, créant une ligne droite</li>
+            <li>Vos bras doivent bouger naturellement, légèrement détachés du corps</li>
+            <li>Fixez un point au bout du podium et maintenez un regard confiant</li>
+            <li>Pratiquez avec différents types de chaussures (talons hauts, plates)</li>
+        </ul>
+
+        <div class="tip-box">
+            <h4>Conseil Pro</h4>
+            <p>Entraînez-vous chaque jour pendant au moins 30 minutes. Filmez-vous pour identifier les points à améliorer. La répétition crée la confiance.</p>
+        </div>
+
+        <h3>2. Prenez soin de vous</h3>
+        
+        <p>Dans les jours précédant le défilé, adoptez une routine de bien-être :</p>
+        
+        <ul>
+            <li>Dormez suffisamment (8 heures minimum)</li>
+            <li>Hydratez-vous abondamment</li>
+            <li>Mangez équilibré, évitez les aliments qui gonflent</li>
+            <li>Faites des exercices de relaxation ou de méditation</li>
+            <li>Prenez soin de votre peau et de vos cheveux</li>
+        </ul>
+
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200" alt="Préparation défilé" class="article-image" loading="lazy">
+
+        <h2>Le Jour du Défilé</h2>
+        
+        <h3>3. Arrivez préparé(e)</h3>
+        
+        <p>Votre kit de survie pour le backstage :</p>
+        
+        <ol>
+            <li><strong>Sous-vêtements nude</strong> - Indispensables et discrets sous n'importe quelle tenue</li>
+            <li><strong>Talons de rechange</strong> - Au cas où ceux fournis ne conviennent pas</li>
+            <li><strong>Kit de maquillage basique</strong> - Pour les retouches rapides</li>
+            <li><strong>Snacks sains</strong> - Fruits secs, barres énergétiques</li>
+            <li><strong>Bouteille d'eau</strong> - L'hydratation est cruciale</li>
+            <li><strong>Chargeur de téléphone</strong> - Pour rester joignable</li>
+        </ol>
+
+        <h3>4. Gérez le stress</h3>
+        
+        <p>Le trac est naturel et même bénéfique quand il est maîtrisé. Voici comment le transformer en énergie positive :</p>
+
+        <div class="article-quote">
+            <p>"Le trac n'est pas votre ennemi, c'est votre corps qui se prépare à donner le meilleur de lui-même. Accueillez-le comme un allié."</p>
+        </div>
+        
+        <ul>
+            <li><strong>Respirez profondément</strong> - Inspirez 4 secondes, retenez 4 secondes, expirez 4 secondes</li>
+            <li><strong>Visualisez votre succès</strong> - Imaginez-vous défiler avec assurance</li>
+            <li><strong>Échauffez-vous</strong> - Quelques étirements détendent les muscles</li>
+            <li><strong>Restez positif(ve)</strong> - Évitez les personnes négatives</li>
+        </ul>
+
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200" alt="Backstage défilé" class="article-image" loading="lazy">
+
+        <h2>Sur le Podium</h2>
+        
+        <h3>5. Incarnez le vêtement</h3>
+        
+        <p>Vous n'êtes pas simplement un cintre ambulant. Votre rôle est de donner vie au vêtement, de raconter une histoire. Pensez à :</p>
+        
+        <ul>
+            <li>Comprendre l'esprit de la collection</li>
+            <li>Adapter votre attitude au style des vêtements</li>
+            <li>Maintenir une expression qui correspond au thème</li>
+            <li>Vous approprier chaque tenue comme si c'était la vôtre</li>
+        </ul>
+
+        <h3>6. Les erreurs à éviter</h3>
+        
+        <ul>
+            <li><strong>Ne regardez pas vos pieds</strong> - Votre regard doit être horizontal ou légèrement vers le haut</li>
+            <li><strong>Ne souriez pas trop</strong> - Sauf indication contraire, restez neutre et élégant(e)</li>
+            <li><strong>Ne vous précipitez pas</strong> - Gardez un rythme constant et maîtrisé</li>
+            <li><strong>N'improvisez pas</strong> - Suivez les instructions du directeur artistique</li>
+            <li><strong>Ne paniquez pas en cas d'imprévu</strong> - Restez professionnel(le) quoi qu'il arrive</li>
+        </ul>
+
+        <div class="tip-box">
+            <h4>En cas de chute</h4>
+            <p>Si vous trébuchez, relevez-vous avec grâce et continuez comme si de rien n'était. Les plus grands mannequins ont tous connu ce moment. C'est votre réaction qui compte.</p>
+        </div>
+
+        <h2>Après le Défilé</h2>
+        
+        <p>Votre premier défilé est terminé. Félicitations ! Maintenant :</p>
+        
+        <ul>
+            <li>Remerciez l'équipe (maquilleurs, habilleurs, organisateurs)</li>
+            <li>Échangez vos contacts avec les autres mannequins</li>
+            <li>Analysez ce qui a bien fonctionné et ce qui peut être amélioré</li>
+            <li>Récupérez les photos et vidéos pour votre portfolio</li>
+            <li>Célébrez votre réussite !</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        
+        <p>Votre premier défilé est une étape importante dans votre carrière. Avec une bonne préparation et la bonne attitude, vous avez toutes les clés pour réussir. Chez Models Academy Management, nous sommes là pour vous accompagner à chaque étape de votre parcours.</p>
+        
+        <p>N'oubliez pas : chaque grand mannequin a un jour fait son premier défilé. C'est maintenant votre tour de briller.</p>
+
+        <div class="share-section">
+            <h4>Partager cet article</h4>
+            <div class="share-buttons">
+                <a href="#" class="share-btn"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="share-btn"><i class='bx bxl-twitter'></i></a>
+                <a href="#" class="share-btn"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" class="share-btn"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+        </div>
+    </article>
+
+    <section class="related-articles">
+        <h3>Articles Similaires</h3>
+        <div class="related-grid">
+            <a href="blog-article-1.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1558769132-cb1aea3c3000?w=600" alt="Tendances 2024" loading="lazy">
+                <div class="related-card-content">
+                    <h4>Les Tendances du Mannequinat en 2024</h4>
+                    <span class="date">15 Novembre 2024</span>
+                </div>
+            </a>
+            <a href="blog-article-3.html" class="related-card">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600" alt="Book photo" loading="lazy">
+                <div class="related-card-content">
+                    <h4>La Préparation du Book Photo Parfait</h4>
+                    <span class="date">5 Novembre 2024</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MODELS ACADEMY</h3>
+                    <p>Votre partenaire pour une carrière réussie dans le mannequinat.</p>
+                    <div class="social-links">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>LIENS RAPIDES</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="formations.html">Formations</a></li>
+                        <li><a href="mannequins.html">Mannequins</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTACT</h3>
+                    <ul>
+                        <li><i class='bx bx-phone'></i> +229 69 89 69 50</li>
+                        <li><i class='bx bx-map'></i> Calavi Bidossessi, derrière la clôture de l'ORTB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS RÉSERVÉS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
