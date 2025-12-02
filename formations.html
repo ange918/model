@@ -1,504 +1,639 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOS FORMATIONS - MODELS ACADEMY MANAGEMENT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-        }
-        
-        .page-hero {
-            height: 50vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558769132-cb1aea3c3000?w=1600') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            margin-top: 70px;
-        }
-        
-        .page-hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-        }
-        
-        .formation-detail {
-            background: var(--white);
-            padding: 3rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f0f0;
-        }
-        
-        .formation-header {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--secondary-color);
-        }
-        
-        .formation-header i {
-            font-size: 3rem;
-            color: var(--primary-color);
-        }
-        
-        .formation-header h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 400;
-            color: var(--primary-color);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-        
-        .formation-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-        }
-        
-        .formation-info h3 {
-            color: var(--primary-color);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        
-        .formation-info p {
-            font-weight: 300;
-            font-size: 0.9rem;
-            line-height: 1.8;
-            color: var(--text-light);
-        }
-        
-        .formation-info ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .formation-info ul li {
-            padding: 0.5rem 0;
-            padding-left: 2rem;
-            position: relative;
-            color: var(--text-light);
-            font-weight: 300;
-            font-size: 0.9rem;
-        }
-        
-        .formation-info ul li::before {
-            content: '\2713';
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        
-        .formation-sidebar {
-            background: var(--secondary-color);
-            padding: 2rem;
-            height: fit-content;
-        }
-        
-        .formation-sidebar h3 {
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .info-item i {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-        }
-        
-        .info-item div strong {
-            display: block;
-            color: var(--primary-color);
-            font-weight: 400;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        .info-item div span {
-            color: var(--text-light);
-            font-weight: 300;
-            font-size: 0.9rem;
-        }
-        
-        .price {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            font-weight: 400;
-            text-align: center;
-            margin: 2rem 0;
-        }
-        
-        @media (max-width: 968px) {
-            .formation-content {
-                grid-template-columns: 1fr;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NOS FORMATIONS - MODELS ACADEMY MANAGEMENT</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <style>
+            body {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 300;
             }
-            
-            .formation-header {
-                flex-direction: column;
+
+            .page-hero {
+                height: 50vh;
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url("https://i.ibb.co/WjQkPk9/IMG-20250920-WA0088.jpg")
+                        center/cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 text-align: center;
+                color: var(--white);
+                margin-top: 70px;
             }
-            
+
             .page-hero h1 {
-                font-size: 2rem;
-                letter-spacing: 4px;
+                font-family: "Cormorant Garamond", serif;
+                font-size: 3rem;
+                font-weight: 300;
+                letter-spacing: 8px;
+                text-transform: uppercase;
             }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="img/models academy.jpg" alt="Models Academy" class="logo-img" loading="eager">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">ACCUEIL</a></li>
-                    <li><a href="about.html">À PROPOS</a></li>
-                    <li><a href="formations.html" class="active">FORMATIONS</a></li>
-                    <li><a href="mannequins.html">MANNEQUINS</a></li>
-                    <li><a href="inscription.html">S'INSCRIRE</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </nav>
-            <i class='bx bx-menu mobile-menu-btn'></i>
-        </div>
-    </header>
 
-    <section class="page-hero">
-        <h1>NOS FORMATIONS</h1>
-    </section>
+            .formation-detail {
+                background: var(--white);
+                padding: 3rem;
+                margin-bottom: 3rem;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+                border: 1px solid #f0f0f0;
+            }
 
-    <section class="section">
-        <div class="container">
-            <div id="podium" class="formation-detail">
-                <div class="formation-header">
-                    <i class='bx bx-walk'></i>
-                    <h2>FORMATION MANNEQUIN PODIUM</h2>
-                </div>
-                <div class="formation-content">
-                    <div class="formation-info">
-                        <p>
-                            Apprenez l'art de la démarche professionnelle et maîtrisez tous les aspects du défilé de mode. 
-                            Cette formation complète vous prépare aux podiums nationaux et internationaux.
-                        </p>
-                        
-                        <h3><i class='bx bx-target-lock'></i> OBJECTIFS DE LA FORMATION</h3>
-                        <ul>
-                            <li>Maîtriser la démarche professionnelle (catwalk)</li>
-                            <li>Développer sa présence scénique et son charisme</li>
-                            <li>Apprendre les techniques de pose et de présentation</li>
-                            <li>Comprendre les codes du défilé de mode</li>
-                            <li>Gérer le stress et la pression du podium</li>
-                        </ul>
-                        
-                        <h3><i class='bx bx-book-open'></i> PROGRAMME DÉTAILLÉ</h3>
-                        <ul>
-                            <li>Technique de marche et démarche professionnelle</li>
-                            <li>Poses et attitudes sur podium</li>
-                            <li>Gestion de l'espace et du timing</li>
-                            <li>Expression corporelle et gestuelle</li>
-                            <li>Préparation physique et maintien</li>
-                            <li>Travail avec différents types de vêtements</li>
-                            <li>Gestion des accessoires (chaussures, sacs)</li>
-                            <li>Simulation de défilés réels</li>
-                            <li>Développement de la confiance en soi</li>
-                        </ul>
-                        
-                        <h3><i class='bx bx-check-circle'></i> CONDITIONS D'ADMISSION</h3>
-                        <ul>
-                            <li>Âge minimum : 16 ans</li>
-                            <li>Taille minimum : 1m72 (femmes) / 1m82 (hommes)</li>
-                            <li>Motivation et engagement</li>
-                            <li>Aucune expérience préalable requise</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="formation-sidebar">
-                        <h3>INFORMATIONS PRATIQUES</h3>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-time'></i>
-                            <div>
-                                <strong>DURÉE</strong>
-                                <span>1 ans (52 Semaines)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-calendar'></i>
-                            <div>
-                                <strong>RYTHME</strong>
-                                <span>2 sessions par semaine</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-group'></i>
-                            <div>
-                                <strong>GROUPE</strong>
-                                <span>Max 25 personnes</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-map'></i>
-                            <div>
-                                <strong>LIEU</strong>
-                                <span>Calavi Bidossessi</span>
-                            </div>
-                        </div>
-                        
-                        <div class="price">150.000 FCFA</div>
-                        
-                        <a href="inscription.html" class="btn" style="width: 100%; text-align: center;">S'INSCRIRE MAINTENANT</a>
-                    </div>
-                </div>
-            </div>
+            .formation-header {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid var(--secondary-color);
+            }
 
-            <div id="photo" class="formation-detail">
-                <div class="formation-header">
-                    <i class='bx bx-camera'></i>
-                    <h2>FORMATION MODEL PHOTO</h2>
-                </div>
-                <div class="formation-content">
-                    <div class="formation-info">
-                        <p>
-                            Développez votre talent devant l'objectif et créez un portfolio professionnel qui vous ouvrira 
-                            les portes des plus grandes agences et magazines.
-                        </p>
-                        
-                        <h3><i class='bx bx-target-lock'></i> OBJECTIFS DE LA FORMATION</h3>
-                        <ul>
-                            <li>Maîtriser les poses et expressions pour la photo</li>
-                            <li>Comprendre la lumière et les angles de prise de vue</li>
-                            <li>Développer son style personnel</li>
-                            <li>Créer un book professionnel complet</li>
-                            <li>Travailler avec photographes et directeurs artistiques</li>
-                        </ul>
-                        
-                        <h3><i class='bx bx-book-open'></i> PROGRAMME DÉTAILLÉ</h3>
-                        <ul>
-                            <li>Techniques de pose (portrait, mode, beauté)</li>
-                            <li>Expression du visage et regard caméra</li>
-                            <li>Langage corporel et gestuelle</li>
-                            <li>Travail avec la lumière naturelle et artificielle</li>
-                            <li>Poses pour différents types de shooting</li>
-                            <li>Communication avec le photographe</li>
-                            <li>Préparation avant séance photo</li>
-                            <li>Création et développement du book</li>
-                            <li>Sessions photos professionnelles incluses</li>
-                        </ul>
-                        
-                        <h3><i class='bx bx-check-circle'></i> CONDITIONS D'ADMISSION</h3>
-                        <ul>
-                            <li>Âge minimum : 16 ans</li>
-                            <li>Photogénie et expressivité</li>
-                            <li>Motivation et créativité</li>
-                            <li>Portfolio existant bienvenu mais non obligatoire</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="formation-sidebar">
-                        <h3>INFORMATIONS PRATIQUES</h3>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-time'></i>
-                            <div>
-                                <strong>DURÉE</strong>
-                                <span>8 mois (33 semaines)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-calendar'></i>
-                            <div>
-                                <strong>RYTHME</strong>
-                                <span>2 sessions par semaine</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-group'></i>
-                            <div>
-                                <strong>GROUPE</strong>
-                                <span>Max 8 personnes</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-map'></i>
-                            <div>
-                                <strong>LIEU</strong>
-                                <span>Calavi Bidossessi</span>
-                            </div>
-                        </div>
-                        
-                        <div class="price">100.000 FCFA</div>
-                        
-                        <a href="inscription.html" class="btn" style="width: 100%; text-align: center;">S'INSCRIRE MAINTENANT</a>
-                    </div>
-                </div>
-            </div>
+            .formation-header i {
+                font-size: 3rem;
+                color: var(--primary-color);
+            }
 
-            <div id="developpement" class="formation-detail">
-                <div class="formation-header">
-                    <i class='bx bx-brain'></i>
-                    <h2>FORMATION DÉVELOPPEMENT PERSONNEL</h2>
-                </div>
-                <div class="formation-content">
-                    <div class="formation-info">
-                        <p>
-                            Développez votre confiance en vous, votre charisme et votre présence pour exceller 
-                            dans l'industrie de la mode et atteindre votre plein potentiel.
-                        </p>
-                        
-                        <h3><i class='bx bx-target-lock'></i> OBJECTIFS DE LA FORMATION</h3>
-                        <ul>
-                            <li>Développer une confiance en soi solide et durable</li>
-                            <li>Maîtriser l'art de la communication et du charisme</li>
-                            <li>Apprendre à gérer le stress et la pression</li>
-                            <li>Construire une image personnelle authentique</li>
-                            <li>Développer son intelligence émotionnelle</li>
-                        </ul>
-                        
-                        <h3><i class='bx bx-book-open'></i> PROGRAMME DÉTAILLÉ</h3>
-                        <ul>
-                            <li>Connaissance de soi et développement personnel</li>
-                            <li>Techniques de prise de parole en public</li>
-                            <li>Gestion du stress et des émotions</li>
-                            <li>Communication non-verbale et langage corporel</li>
-                            <li>Construction de son personal branding</li>
-                            <li>Nutrition et bien-être</li>
-                            <li>Préparation mentale aux castings</li>
-                            <li>Méditation et techniques de relaxation</li>
-                            <li>Leadership et affirmation de soi</li>
-                            <li>Coaching personnalisé</li>
-                        </ul>
-                        
-                        <h3><i class='bx bx-check-circle'></i> CONDITIONS D'ADMISSION</h3>
-                        <ul>
-                            <li>Âge minimum : 16 ans</li>
-                            <li>Motivation et envie de progresser</li>
-                            <li>Ouverture d'esprit</li>
-                            <li>Engagement personnel</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="formation-sidebar">
-                        <h3>INFORMATIONS PRATIQUES</h3>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-time'></i>
-                            <div>
-                                <strong>DURÉE</strong>
-                                <span>6 mois (24 semaines)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-calendar'></i>
-                            <div>
-                                <strong>RYTHME</strong>
-                                <span>2 sessions par semaine</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-group'></i>
-                            <div>
-                                <strong>GROUPE</strong>
-                                <span>Max 15 personnes</span>
-                            </div>
-                        </div>
-                        
-                        <div class="info-item">
-                            <i class='bx bx-map'></i>
-                            <div>
-                                <strong>LIEU</strong>
-                                <span>Calavi Bidossessi</span>
-                            </div>
-                        </div>
-                        
-                        <div class="price">120.000 FCFA</div>
-                        
-                        <a href="inscription.html" class="btn" style="width: 100%; text-align: center;">S'INSCRIRE MAINTENANT</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            .formation-header h2 {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 2rem;
+                font-weight: 400;
+                color: var(--primary-color);
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>MODELS ACADEMY</h3>
-                    <p>Votre partenaire pour une carrière réussie dans le mannequinat.</p>
-                    <div class="social-links">
-                        <a href="#"><i class='bx bxl-facebook'></i></a>
-                        <a href="#"><i class='bx bxl-instagram'></i></a>
-                        <a href="#"><i class='bx bxl-twitter'></i></a>
-                        <a href="#"><i class='bx bxl-youtube'></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>LIENS RAPIDES</h3>
+            .formation-content {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 3rem;
+            }
+
+            .formation-info h3 {
+                color: var(--primary-color);
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                font-family: "Montserrat", sans-serif;
+                font-size: 0.9rem;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+
+            .formation-info p {
+                font-weight: 300;
+                font-size: 0.9rem;
+                line-height: 1.8;
+                color: var(--text-light);
+            }
+
+            .formation-info ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .formation-info ul li {
+                padding: 0.5rem 0;
+                padding-left: 2rem;
+                position: relative;
+                color: var(--text-light);
+                font-weight: 300;
+                font-size: 0.9rem;
+            }
+
+            .formation-info ul li::before {
+                content: "\2713";
+                position: absolute;
+                left: 0;
+                color: var(--primary-color);
+                font-weight: bold;
+            }
+
+            .formation-sidebar {
+                background: var(--secondary-color);
+                padding: 2rem;
+                height: fit-content;
+            }
+
+            .formation-sidebar h3 {
+                margin-bottom: 1.5rem;
+                color: var(--primary-color);
+                font-family: "Montserrat", sans-serif;
+                font-size: 0.9rem;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+
+            .info-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .info-item i {
+                font-size: 1.5rem;
+                color: var(--primary-color);
+            }
+
+            .info-item div strong {
+                display: block;
+                color: var(--primary-color);
+                font-weight: 400;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .info-item div span {
+                color: var(--text-light);
+                font-weight: 300;
+                font-size: 0.9rem;
+            }
+
+            .price {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 2.5rem;
+                color: var(--primary-color);
+                font-weight: 400;
+                text-align: center;
+                margin: 2rem 0;
+            }
+
+            @media (max-width: 968px) {
+                .formation-content {
+                    grid-template-columns: 1fr;
+                }
+
+                .formation-header {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .page-hero h1 {
+                    font-size: 2rem;
+                    letter-spacing: 4px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img
+                        src="img/models academy.jpg"
+                        alt="Models Academy"
+                        class="logo-img"
+                        loading="eager"
+                    />
+                </a>
+                <nav>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="about.html">À propos</a></li>
-                        <li><a href="formations.html">Formations</a></li>
-                        <li><a href="mannequins.html">Mannequins</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="about.html">À PROPOS</a></li>
+                        <li>
+                            <a href="formations.html" class="active"
+                                >FORMATIONS</a
+                            >
+                        </li>
+                        <li><a href="mannequins.html">MANNEQUINS</a></li>
+                        <li><a href="inscription.html">S'INSCRIRE</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>CONTACT</h3>
-                    <ul>
-                        <li><i class='bx bx-phone'></i> +229 69 89 69 50</li>
-                        <li><i class='bx bx-map'></i> Calavi Bidossessi, derrière la clôture de l'ORTB</li>
-                    </ul>
-                </div>
+                </nav>
+                <i class="bx bx-menu mobile-menu-btn"></i>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS RÉSERVÉS.</p>
-            </div>
-        </div>
-    </footer>
+        </header>
 
-    <script src="main.js"></script>
-</body>
+        <section class="page-hero">
+            <h1>NOS FORMATIONS</h1>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div id="podium" class="formation-detail">
+                    <div class="formation-header">
+                        <i class="bx bx-walk"></i>
+                        <h2>FORMATION MANNEQUIN PODIUM</h2>
+                    </div>
+                    <div class="formation-content">
+                        <div class="formation-info">
+                            <p>
+                                Apprenez l'art de la démarche professionnelle et
+                                maîtrisez tous les aspects du défilé de mode.
+                                Cette formation complète vous prépare aux
+                                podiums nationaux et internationaux.
+                            </p>
+
+                            <h3>
+                                <i class="bx bx-target-lock"></i> OBJECTIFS DE
+                                LA FORMATION
+                            </h3>
+                            <ul>
+                                <li>
+                                    Maîtriser la démarche professionnelle
+                                    (catwalk)
+                                </li>
+                                <li>
+                                    Développer sa présence scénique et son
+                                    charisme
+                                </li>
+                                <li>
+                                    Apprendre les techniques de pose et de
+                                    présentation
+                                </li>
+                                <li>Comprendre les codes du défilé de mode</li>
+                                <li>
+                                    Gérer le stress et la pression du podium
+                                </li>
+                            </ul>
+
+                            <h3>
+                                <i class="bx bx-book-open"></i> PROGRAMME
+                                DÉTAILLÉ
+                            </h3>
+                            <ul>
+                                <li>
+                                    Technique de marche et démarche
+                                    professionnelle
+                                </li>
+                                <li>Poses et attitudes sur podium</li>
+                                <li>Gestion de l'espace et du timing</li>
+                                <li>Expression corporelle et gestuelle</li>
+                                <li>Préparation physique et maintien</li>
+                                <li>
+                                    Travail avec différents types de vêtements
+                                </li>
+                                <li>
+                                    Gestion des accessoires (chaussures, sacs)
+                                </li>
+                                <li>Simulation de défilés réels</li>
+                                <li>Développement de la confiance en soi</li>
+                            </ul>
+
+                            <h3>
+                                <i class="bx bx-check-circle"></i> CONDITIONS
+                                D'ADMISSION
+                            </h3>
+                            <ul>
+                                <li>Âge minimum : 16 ans</li>
+                                <li>
+                                    Taille minimum : 1m72 (femmes) / 1m82
+                                    (hommes)
+                                </li>
+                                <li>Motivation et engagement</li>
+                                <li>Aucune expérience préalable requise</li>
+                            </ul>
+                        </div>
+
+                        <div class="formation-sidebar">
+                            <h3>INFORMATIONS PRATIQUES</h3>
+
+                            <div class="info-item">
+                                <i class="bx bx-time"></i>
+                                <div>
+                                    <strong>DURÉE</strong>
+                                    <span>1 ans (52 Semaines)</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-calendar"></i>
+                                <div>
+                                    <strong>RYTHME</strong>
+                                    <span>2 sessions par semaine</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-group"></i>
+                                <div>
+                                    <strong>GROUPE</strong>
+                                    <span>Max 25 personnes</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-map"></i>
+                                <div>
+                                    <strong>LIEU</strong>
+                                    <span>Calavi Bidossessi</span>
+                                </div>
+                            </div>
+
+                            <div class="price">150.000 FCFA</div>
+
+                            <a
+                                href="inscription.html"
+                                class="btn"
+                                style="width: 100%; text-align: center"
+                                >S'INSCRIRE MAINTENANT</a
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div id="photo" class="formation-detail">
+                    <div class="formation-header">
+                        <i class="bx bx-camera"></i>
+                        <h2>FORMATION MODEL PHOTO</h2>
+                    </div>
+                    <div class="formation-content">
+                        <div class="formation-info">
+                            <p>
+                                Développez votre talent devant l'objectif et
+                                créez un portfolio professionnel qui vous
+                                ouvrira les portes des plus grandes agences et
+                                magazines.
+                            </p>
+
+                            <h3>
+                                <i class="bx bx-target-lock"></i> OBJECTIFS DE
+                                LA FORMATION
+                            </h3>
+                            <ul>
+                                <li>
+                                    Maîtriser les poses et expressions pour la
+                                    photo
+                                </li>
+                                <li>
+                                    Comprendre la lumière et les angles de prise
+                                    de vue
+                                </li>
+                                <li>Développer son style personnel</li>
+                                <li>Créer un book professionnel complet</li>
+                                <li>
+                                    Travailler avec photographes et directeurs
+                                    artistiques
+                                </li>
+                            </ul>
+
+                            <h3>
+                                <i class="bx bx-book-open"></i> PROGRAMME
+                                DÉTAILLÉ
+                            </h3>
+                            <ul>
+                                <li>
+                                    Techniques de pose (portrait, mode, beauté)
+                                </li>
+                                <li>Expression du visage et regard caméra</li>
+                                <li>Langage corporel et gestuelle</li>
+                                <li>
+                                    Travail avec la lumière naturelle et
+                                    artificielle
+                                </li>
+                                <li>Poses pour différents types de shooting</li>
+                                <li>Communication avec le photographe</li>
+                                <li>Préparation avant séance photo</li>
+                                <li>Création et développement du book</li>
+                                <li>
+                                    Sessions photos professionnelles incluses
+                                </li>
+                            </ul>
+
+                            <h3>
+                                <i class="bx bx-check-circle"></i> CONDITIONS
+                                D'ADMISSION
+                            </h3>
+                            <ul>
+                                <li>Âge minimum : 16 ans</li>
+                                <li>Photogénie et expressivité</li>
+                                <li>Motivation et créativité</li>
+                                <li>
+                                    Portfolio existant bienvenu mais non
+                                    obligatoire
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="formation-sidebar">
+                            <h3>INFORMATIONS PRATIQUES</h3>
+
+                            <div class="info-item">
+                                <i class="bx bx-time"></i>
+                                <div>
+                                    <strong>DURÉE</strong>
+                                    <span>8 mois (33 semaines)</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-calendar"></i>
+                                <div>
+                                    <strong>RYTHME</strong>
+                                    <span>2 sessions par semaine</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-group"></i>
+                                <div>
+                                    <strong>GROUPE</strong>
+                                    <span>Max 8 personnes</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-map"></i>
+                                <div>
+                                    <strong>LIEU</strong>
+                                    <span>Calavi Bidossessi</span>
+                                </div>
+                            </div>
+
+                            <div class="price">100.000 FCFA</div>
+
+                            <a
+                                href="inscription.html"
+                                class="btn"
+                                style="width: 100%; text-align: center"
+                                >S'INSCRIRE MAINTENANT</a
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div id="developpement" class="formation-detail">
+                    <div class="formation-header">
+                        <i class="bx bx-brain"></i>
+                        <h2>FORMATION DÉVELOPPEMENT PERSONNEL</h2>
+                    </div>
+                    <div class="formation-content">
+                        <div class="formation-info">
+                            <p>
+                                Développez votre confiance en vous, votre
+                                charisme et votre présence pour exceller dans
+                                l'industrie de la mode et atteindre votre plein
+                                potentiel.
+                            </p>
+
+                            <h3>
+                                <i class="bx bx-target-lock"></i> OBJECTIFS DE
+                                LA FORMATION
+                            </h3>
+                            <ul>
+                                <li>
+                                    Développer une confiance en soi solide et
+                                    durable
+                                </li>
+                                <li>
+                                    Maîtriser l'art de la communication et du
+                                    charisme
+                                </li>
+                                <li>
+                                    Apprendre à gérer le stress et la pression
+                                </li>
+                                <li>
+                                    Construire une image personnelle authentique
+                                </li>
+                                <li>
+                                    Développer son intelligence émotionnelle
+                                </li>
+                            </ul>
+
+                            <h3>
+                                <i class="bx bx-book-open"></i> PROGRAMME
+                                DÉTAILLÉ
+                            </h3>
+                            <ul>
+                                <li>
+                                    Connaissance de soi et développement
+                                    personnel
+                                </li>
+                                <li>Techniques de prise de parole en public</li>
+                                <li>Gestion du stress et des émotions</li>
+                                <li>
+                                    Communication non-verbale et langage
+                                    corporel
+                                </li>
+                                <li>Construction de son personal branding</li>
+                                <li>Nutrition et bien-être</li>
+                                <li>Préparation mentale aux castings</li>
+                                <li>Méditation et techniques de relaxation</li>
+                                <li>Leadership et affirmation de soi</li>
+                                <li>Coaching personnalisé</li>
+                            </ul>
+
+                            <h3>
+                                <i class="bx bx-check-circle"></i> CONDITIONS
+                                D'ADMISSION
+                            </h3>
+                            <ul>
+                                <li>Âge minimum : 16 ans</li>
+                                <li>Motivation et envie de progresser</li>
+                                <li>Ouverture d'esprit</li>
+                                <li>Engagement personnel</li>
+                            </ul>
+                        </div>
+
+                        <div class="formation-sidebar">
+                            <h3>INFORMATIONS PRATIQUES</h3>
+
+                            <div class="info-item">
+                                <i class="bx bx-time"></i>
+                                <div>
+                                    <strong>DURÉE</strong>
+                                    <span>6 mois (24 semaines)</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-calendar"></i>
+                                <div>
+                                    <strong>RYTHME</strong>
+                                    <span>2 sessions par semaine</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-group"></i>
+                                <div>
+                                    <strong>GROUPE</strong>
+                                    <span>Max 15 personnes</span>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="bx bx-map"></i>
+                                <div>
+                                    <strong>LIEU</strong>
+                                    <span>Calavi Bidossessi</span>
+                                </div>
+                            </div>
+
+                            <div class="price">120.000 FCFA</div>
+
+                            <a
+                                href="inscription.html"
+                                class="btn"
+                                style="width: 100%; text-align: center"
+                                >S'INSCRIRE MAINTENANT</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>MODELS ACADEMY</h3>
+                        <p>
+                            Votre partenaire pour une carrière réussie dans le
+                            mannequinat.
+                        </p>
+                        <div class="social-links">
+                            <a href="#"><i class="bx bxl-facebook"></i></a>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                            <a href="#"><i class="bx bxl-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>LIENS RAPIDES</h3>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="formations.html">Formations</a></li>
+                            <li><a href="mannequins.html">Mannequins</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>CONTACT</h3>
+                        <ul>
+                            <li>
+                                <i class="bx bx-phone"></i> +229 69 89 69 50
+                            </li>
+                            <li>
+                                <i class="bx bx-map"></i> Calavi Bidossessi,
+                                derrière la clôture de l'ORTB
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        &copy; 2024 MODELS ACADEMY MANAGEMENT. TOUS DROITS
+                        RÉSERVÉS.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
 </html>
