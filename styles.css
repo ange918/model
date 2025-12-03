@@ -542,3 +542,69 @@ footer {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* About Section Styles */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  font-weight: 300;
+}
+
+/* Typewriter Animation */
+.typewriter-text {
+  overflow: hidden;
+}
+
+.typewriter-text.animate {
+  opacity: 1;
+}
+
+.typewriter-text .char {
+  opacity: 0;
+  display: inline;
+}
+
+.typewriter-text .char.visible {
+  opacity: 1;
+  transition: opacity 0.05s ease;
+}
+
+/* Mobile: Text on top, image on bottom */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    order: 2;
+  }
+  
+  .about-text {
+    order: 1;
+  }
+  
+  .about-image img {
+    height: 300px;
+  }
+}
