@@ -288,6 +288,36 @@ footer {
   letter-spacing: 2px;
 }
 
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-minimal {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  min-width: 250px;
+  text-align: center;
+}
+
+.btn-minimal:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 2.5rem;
