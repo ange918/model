@@ -318,6 +318,15 @@ footer {
   border-color: var(--white);
 }
 
+.btn-minimal.btn-dark {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: transparent;
+}
+
+.btn-minimal.btn-dark:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 2.5rem;
