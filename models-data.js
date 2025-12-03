@@ -54,6 +54,9 @@ const modelsData = {
             "https://i.ibb.co/zksk8ZM/j.gif",
             "https://i.ibb.co/4g1mnDrP/k.gif",
             "https://i.ibb.co/Gvm5P2Xc/7.jpg",
+            "https://i.ibb.co/VcC6mc6Q/IMG-20251203-WA0034.jpg",
+            "https://i.ibb.co/r2Z6JX7X/IMG-20251203-WA0044.jpg",
+            "https://i.ibb.co/chDsjyLm/IMG-20251203-WA0036.jpg",
             "https://i.ibb.co/rKb5Sk33/Whats-App-Image-2025-12-02-at-22-43-18-1.jpg",
 
         ],
