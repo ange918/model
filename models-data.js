@@ -571,7 +571,7 @@ const modelsData = {
     18: {
         name: "SAGBO AMEN",
         specialty: "Podium",
-        photo: "https://i.ibb.co/ksnPQ61f/1.jpg",
+        photo: "https://i.ibb.co/Fb6shcN5/Whats-App-Image-2025-12-03-at-20-58-13-1.jpg",
         bio: "Mannequin professionnel forme a Models Academy Management.",
         height: "1m80",
         hair: "Noir",
@@ -582,11 +582,26 @@ const modelsData = {
         waist: "77cm",
         hips: "93cm",
         shoeSize: "43 EU",
-        portfolioPhotos: [],
+        portfolioPhotos: [
+            "https://i.ibb.co/5X4rJtz4/Whats-App-Image-2025-12-03-at-20-58-19.jpg",
+            "https://i.ibb.co/p61Sxg5f/Whats-App-Image-2025-12-03-at-20-58-27.jpg",
+            "https://i.ibb.co/W4PJSDT4/Whats-App-Image-2025-12-03-at-20-58-30.jpg",
+            "https://i.ibb.co/sv2wVFCK/Whats-App-Image-2025-12-03-at-20-58-32.jpg",
+            "https://i.ibb.co/kg8FdRHm/Whats-App-Image-2025-12-03-at-20-58-33.jpg",
+            "https://i.ibb.co/4wQZjsKf/Whats-App-Image-2025-12-03-at-20-58-34.jpg",
+            "https://i.ibb.co/xKDhMvZh/Whats-App-Image-2025-12-03-at-20-58-35.jpg",
+            "https://i.ibb.co/67pHd1vM/Whats-App-Image-2025-12-03-at-20-58-36.jpg",
+            "https://i.ibb.co/ZzwGjCTF/Whats-App-Image-2025-12-03-at-20-58-37.jpg",
+            "https://i.ibb.co/gM50W3Bf/Whats-App-Image-2025-12-03-at-20-58-41.jpg",
+        ],
         fashionPhotos: [],
         shootingPhotos: [
             "https://i.ibb.co/ksnPQ61f/1.jpg",
-            "https://i.ibb.co/YrGmn4D/8.jpg",
+            "https://i.ibb.co/BVbJq7cT/Whats-App-Image-2025-12-03-at-17-10-37.jpg",
+            "https://i.ibb.co/Sb5jkNf/Whats-App-Image-2025-12-03-at-17-10-37-1.jpg",
+            "https://i.ibb.co/hJMkGJ98/Whats-App-Image-2025-12-03-at-17-10-26.jpg",
+            "https://i.ibb.co/vxzWFT58/Whats-App-Image-2025-12-03-at-17-10-23.jpg",
+            
         ],
     },
 
