@@ -305,7 +305,7 @@
 
                     <div class="contact-form">
                         <h3>ENVOYEZ-NOUS UN MESSAGE</h3>
-                        <form id="contactForm">
+                        <form id="contactForm" method="POST" action="send-contact.php">
                             <div class="form-group">
                                 <label>NOM COMPLET *</label>
                                 <input type="text" name="nom" required />
@@ -403,15 +403,28 @@
 
         <script src="main.js"></script>
         <script>
-            document
-                .getElementById("contactForm")
-                .addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    alert(
-                        "Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.",
-                    );
-                    this.reset();
+            document.getElementById("contactForm")?.addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                
+                fetch('send-contact.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                        document.getElementById("contactForm").reset();
+                    } else {
+                        alert('Erreur: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    alert('Erreur lors de l\'envoi du message: ' + error.message);
                 });
+            });
         </script>
     </body>
 </html>
