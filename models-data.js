@@ -112,42 +112,6 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 3: AGBEWANOU PRISCA ==========
-    3: {
-        name: "AGBEWANOU PRISCA",
-        specialty: "Podium",
-        photo: "img/prisca.jpg",
-        bio: "Mannequin polyvalente excellant aussi bien sur le podium que devant l'objectif.",
-        height: "1m78",
-        hair: "Noir",
-        eyes: "Marron",
-        city: "Cotonou",
-        experience: "4 ans",
-        bust: "85cm",
-        waist: "62cm",
-        hips: "88cm",
-        shoeSize: "39 EU",
-        portfolioPhotos: [
-            "https://i.ibb.co/ch674x9F/g.jpg",
-            "https://i.ibb.co/FkLC9qJg/e.jpg",
-            "https://i.ibb.co/zTHyMGV6/d.jpg",
-            "https://i.ibb.co/8nMNgDjz/c.jpg",
-            "https://i.ibb.co/FLcLjcy5/b-2.jpg",
-        ],
-        fashionPhotos: [],
-        shootingPhotos: [
-            "https://i.ibb.co/CKxRC07f/IMG-20250815-WA0216.jpg",
-            "https://i.ibb.co/6cgknXmy/IMG-20250815-WA0213.jpg",
-            "https://i.ibb.co/DHrmtZZ9/IMG-20250815-WA0212.jpg",
-            "https://i.ibb.co/tpNVgfND/IMG-20250815-WA0210.jpg",
-            "https://i.ibb.co/rKT0DVzp/IMG-20250815-WA0207.jpg",
-            "https://i.ibb.co/rrpQ18p/IMG-20250815-WA0205.jpg",
-            "https://i.ibb.co/rjqMZ8S/IMG-20250815-WA0200.jpg",
-            "https://i.ibb.co/4nJQLg3D/IMG-20250815-WA0195.jpg",
-            "https://i.ibb.co/dwNRjJxk/IMG-20250815-WA0193.jpg",
-        ],
-    },
-
     // ========== MANNEQUIN 4: SENOU PAULA ==========
     4: {
         name: "SENOU PAULA",
@@ -200,43 +164,6 @@ const modelsData = {
             "https://i.ibb.co/4R4hrGwX/23.jpg",
             "https://i.ibb.co/hx6JYGYp/7-4.jpg",
             "https://i.ibb.co/j9ZfTTRh/8-4.jpg",
-        ],
-    },
-
-    // ========== MANNEQUIN 6: EDJO AURELLE ==========
-    6: {
-        name: "EDJO AURELLE",
-        specialty: "Podium",
-        photo: "img/aurelle.jpg",
-        bio: "Mannequin professionnelle formee a Models Academy Management.",
-        height: "1m75",
-        hair: "Noir",
-        eyes: "Marron",
-        city: "Cotonou",
-        experience: "3 ans",
-        bust: "86cm",
-        waist: "72cm",
-        hips: "97cm",
-        shoeSize: "41 EU",
-        portfolioPhotos: [
-            "https://i.ibb.co/hxWZP7D7/IMG-20250820-WA0538.jpg",
-            "https://i.ibb.co/XxvDPB8P/IMG-20250820-WA0530.jpg",
-        ],
-        fashionPhotos: [
-            "https://i.ibb.co/Sw8FHynL/02b6fc0a-2d14-4e0a-89e7-489a942b777f.jpg",
-            "https://i.ibb.co/996Gp67q/242d323a-9ee7-4af3-81c5-e0f1f32963c9.jpg",
-            "https://i.ibb.co/6RPVkPst/a1f43e25-f6e3-4038-a672-8c9fe98f3dcb.jpg",
-            "https://i.ibb.co/ch2tCh6v/c4404a89-d825-4951-9150-4770086b180e.jpg",
-            "https://i.ibb.co/MDLFYFgK/f4ea76cc-8b01-4cb1-8fae-1a368030d440.jpg",
-            "https://i.ibb.co/8g5kd7ct/IMG-7049.jpg",
-            "https://i.ibb.co/n81ccptc/IMG-8038.jpg",
-        ],
-        shootingPhotos: [
-            "https://i.ibb.co/RGS1kyPs/IMG-20251006-WA0217.jpg",
-            "https://i.ibb.co/gFLSvFDz/IMG-20251001-WA0219.jpg",
-            "https://i.ibb.co/3yJkTLhD/IMG-20251001-WA0207.jpg",
-            "https://i.ibb.co/V0fLQPkN/dc2e254d-8d9d-4061-a85c-9ce85b9df0a3.jpg",
-            "https://i.ibb.co/gF7b78ym/shoot2.jpg",
         ],
     },
 
