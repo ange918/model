@@ -187,4 +187,29 @@ document.addEventListener('DOMContentLoaded', function() {
     
     typewriterObserver.observe(element);
   });
+
+  window.openPartyGallery = function() {
+    const modal = document.getElementById('partyGalleryModal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closePartyGallery = function() {
+    const modal = document.getElementById('partyGalleryModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  };
+
+  const partyModal = document.getElementById('partyGalleryModal');
+  if (partyModal) {
+    partyModal.addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePartyGallery();
+      }
+    });
+  }
 });

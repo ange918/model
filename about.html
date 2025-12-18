@@ -258,6 +258,139 @@
                 font-size: 0.9rem;
             }
 
+            .mam-party {
+                background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
+                padding: 4rem 0;
+            }
+
+            .party-content {
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .party-content h2 {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 2.5rem;
+                font-weight: 400;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+                color: #000;
+            }
+
+            .party-content p {
+                color: var(--text-light);
+                line-height: 1.8;
+                margin-bottom: 1.5rem;
+                font-weight: 300;
+                font-size: 1rem;
+            }
+
+            .party-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 40px;
+                background: #000;
+                color: #fff;
+                border: none;
+                font-family: "Montserrat", sans-serif;
+                font-size: 0.85rem;
+                font-weight: 500;
+                letter-spacing: 2px;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+            }
+
+            .party-btn:hover {
+                background: #333;
+                transform: translateY(-2px);
+            }
+
+            .party-gallery-modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                z-index: 1000;
+                overflow-y: auto;
+                padding: 40px 20px;
+            }
+
+            .party-gallery-modal.active {
+                display: block;
+            }
+
+            .party-gallery-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                position: relative;
+            }
+
+            .party-gallery-close {
+                position: absolute;
+                top: -30px;
+                right: 0;
+                font-size: 2.5rem;
+                color: #fff;
+                cursor: pointer;
+                border: none;
+                background: none;
+                transition: transform 0.3s ease;
+            }
+
+            .party-gallery-close:hover {
+                transform: rotate(90deg);
+            }
+
+            .party-gallery-title {
+                color: #fff;
+                text-align: center;
+                margin-bottom: 2rem;
+                font-family: "Cormorant Garamond", serif;
+                font-size: 2rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+
+            .party-gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .party-gallery-item {
+                overflow: hidden;
+                aspect-ratio: 1;
+                background: #222;
+                cursor: pointer;
+            }
+
+            .party-gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .party-gallery-item:hover img {
+                transform: scale(1.05);
+            }
+
+            .party-year-label {
+                text-align: center;
+                color: #999;
+                margin-top: 1.5rem;
+                font-size: 0.9rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
             @media (max-width: 768px) {
                 .about-content {
                     grid-template-columns: 1fr;
@@ -468,6 +601,58 @@
                 </div>
             </div>
         </section>
+
+        <section class="mam-party">
+            <div class="container">
+                <div class="party-content">
+                    <h2>MAM PARTY</h2>
+                    <p>
+                        La fête annuelle de Models Academy Management où nous célébrons les succès de l'année 
+                        écoulée, partageons nos moments les plus inoubliables et nous fixons de nouveaux objectifs 
+                        ambitieux pour la saison à venir. Une occasion unique de renforcer notre communauté et 
+                        d'inspirer les générations futures de mannequins.
+                    </p>
+                    <button class="party-btn" onclick="openPartyGallery()">
+                        <i class='bx bx-images'></i> VOIR LA GALERIE
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="party-gallery-modal" id="partyGalleryModal">
+            <div class="party-gallery-container">
+                <button class="party-gallery-close" onclick="closePartyGallery()">&times;</button>
+                <h3 class="party-gallery-title">MAM PARTY - GALERIE PHOTOS</h3>
+                <div class="party-gallery-grid" id="partyGalleryGrid">
+                    <div class="party-year-label" style="grid-column: 1/-1; margin-top: 0;">Édition 2025</div>
+                    <div class="party-gallery-item">
+                        <img src="https://i.ibb.co/Sw8FHynL/02b6fc0a-2d14-4e0a-89e7-489a942b777f.jpg" alt="MAM Party 2025" loading="lazy">
+                    </div>
+                    <div class="party-gallery-item">
+                        <img src="https://i.ibb.co/996Gp67q/242d323a-9ee7-4af3-81c5-e0f1f32963c9.jpg" alt="MAM Party 2025" loading="lazy">
+                    </div>
+                    <div class="party-gallery-item">
+                        <img src="https://i.ibb.co/6RPVkPst/a1f43e25-f6e3-4038-a672-8c9fe98f3dcb.jpg" alt="MAM Party 2025" loading="lazy">
+                    </div>
+                    <div class="party-gallery-item">
+                        <img src="https://i.ibb.co/ch2tCh6v/c4404a89-d825-4951-9150-4770086b180e.jpg" alt="MAM Party 2025" loading="lazy">
+                    </div>
+                    <div class="party-year-label" style="grid-column: 1/-1;">Édition 2026</div>
+                    <div class="party-gallery-item">
+                        <img src="https://i.ibb.co/MDLFYFgK/f4ea76cc-8b01-4cb1-8fae-1a368030d440.jpg" alt="MAM Party 2026" loading="lazy">
+                    </div>
+                    <div class="party-gallery-item">
+                        <img src="https://i.ibb.co/8g5kd7ct/IMG-7049.jpg" alt="MAM Party 2026" loading="lazy">
+                    </div>
+                    <div class="party-gallery-item">
+                        <img src="https://i.ibb.co/n81ccptc/IMG-8038.jpg" alt="MAM Party 2026" loading="lazy">
+                    </div>
+                    <div class="party-gallery-item">
+                        <img src="https://i.ibb.co/RGS1kyPs/IMG-20251006-WA0217.jpg" alt="MAM Party 2026" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="section">
             <div class="container">
