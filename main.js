@@ -212,4 +212,29 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Video Playlist Auto-Play
+  let currentVideoIndex = 1;
+  const maxVideos = 2;
+  
+  const playNextVideo = () => {
+    const videoId = `playlist-video-${currentVideoIndex}`;
+    const videoIframe = document.getElementById(videoId);
+    
+    if (videoIframe) {
+      const src = videoIframe.src;
+      const baseUrl = src.split('?')[0];
+      videoIframe.src = baseUrl + '?autoplay=1&mute=1';
+      
+      currentVideoIndex = currentVideoIndex === maxVideos ? 1 : currentVideoIndex + 1;
+      
+      setTimeout(() => {
+        playNextVideo();
+      }, 30000);
+    }
+  };
+
+  setTimeout(() => {
+    playNextVideo();
+  }, 100);
 });
