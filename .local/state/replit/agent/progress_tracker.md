@@ -5,3 +5,5 @@
 [x] 5. Delete Aurelle and Prisca completely from models-data.js
 [x] 6. Delete aurelle.jpg and prisca.jpg image files
 [x] 7. Princesse is already in women's category (specialty: Photo, female form)
+[x] 8. Remove Aurelle and Prisca from mannequins.html
+[x] 9. Remove Aurelle image from about.html gallery
