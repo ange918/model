@@ -8,3 +8,4 @@
 [x] 8. Remove Aurelle and Prisca from mannequins.html
 [x] 9. Remove Aurelle image from about.html gallery
 [x] 10. Hide mannequins: KHADY TRAORE, ABOU BACAR, HONEL, NERI, and PRINCESSE from mannequins page
+[x] 11. Remove the 5 mannequins from models-data.js completely

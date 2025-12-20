@@ -219,25 +219,6 @@ const modelsData = {
         shootingPhotos: [],
     },
 
-    // ========== MANNEQUIN 9: KHADY TRAORE ==========
-    9: {
-        name: "KHADY TRAORE",
-        specialty: "Podium",
-        photo: "https://i.ibb.co/hJ8KRFvg/creativie.jpg",
-        bio: "Mannequin professionnelle formee a Models Academy Management.",
-        height: "1m75",
-        hair: "Noir",
-        eyes: "Marron",
-        city: "Cotonou",
-        experience: "3 ans",
-        bust: "85cm",
-        waist: "61cm",
-        hips: "89cm",
-        shoeSize: "38 EU",
-        portfolioPhotos: [],
-        fashionPhotos: [],
-        shootingPhotos: [],
-    },
 
     // ========== MANNEQUIN 10: HOUDJREGBO ROSE ==========
     10: {
@@ -545,25 +526,6 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 20: HOUNGBEDJI ABOU-BACAR ==========
-    20: {
-        name: "HOUNGBEDJI ABOU-BACAR",
-        specialty: "Podium",
-        photo: "",
-        bio: "Mannequin professionnel forme a Models Academy Management.",
-        height: "1m82",
-        hair: "Noir",
-        eyes: "Marron",
-        city: "Cotonou",
-        experience: "2 ans",
-        bust: "96cm",
-        waist: "78cm",
-        hips: "94cm",
-        shoeSize: "43 EU",
-        portfolioPhotos: [],
-        fashionPhotos: [],
-        shootingPhotos: [],
-    },
 
     // ========== MANNEQUIN 21: GBEDEGLA GEORDYS ==========
     21: {
@@ -631,25 +593,6 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 23: TOSSOU RAFIOU HONEL ==========
-    23: {
-        name: "TOSSOU RAFIOU HONEL",
-        specialty: "Podium",
-        photo: "",
-        bio: "Mannequin professionnel forme a Models Academy Management.",
-        height: "1m81",
-        hair: "Noir",
-        eyes: "Marron",
-        city: "Cotonou",
-        experience: "3 ans",
-        bust: "94cm",
-        waist: "76cm",
-        hips: "92cm",
-        shoeSize: "42 EU",
-        portfolioPhotos: [],
-        fashionPhotos: [],
-        shootingPhotos: [],
-    },
 
     // ========== MANNEQUIN 24: ADANTOLANKPE PASCAL ==========
     24: {
@@ -719,48 +662,5 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 26: YAO TAMEWA NERI ==========
-    26: {
-        name: "YAO TAMEWA NERI",
-        specialty: "Podium",
-        photo: "",
-        bio: "Mannequin professionnel forme a Models Academy Management.",
-        height: "1m83",
-        hair: "Noir",
-        eyes: "Marron",
-        city: "Cotonou",
-        experience: "1 ans",
-        bust: "81cm",
-        waist: "72cm",
-        hips: "101cm",
-        shoeSize: "43 EU",
-        portfolioPhotos: [],
-        fashionPhotos: [],
-        shootingPhotos: [],
-    },
-       27: {
-        name: "SINZOGAN Princesse",
-        specialty: "Photo",
-        photo: "",
-        bio: "Mannequin professionnelle formee a Models Academy Management.",
-        height: "1m73",
-        hair: "Noir",
-        eyes: "Marron",
-        city: "Cotonou",
-        experience: "New Face",
-        bust: "74cm",
-        waist: "61cm",
-        hips: "85cm",
-        shoeSize: "38 EU",
-        portfolioPhotos: [
-       
-        ], 
-        fashionPhotos: [
-            
-        ],
-        shootingPhotos: [
-           
-        ],
-    },
 
 };
