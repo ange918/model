@@ -7,3 +7,4 @@
 [x] 7. Princesse is already in women's category (specialty: Photo, female form)
 [x] 8. Remove Aurelle and Prisca from mannequins.html
 [x] 9. Remove Aurelle image from about.html gallery
+[x] 10. Hide mannequins: KHADY TRAORE, ABOU BACAR, HONEL, NERI, and PRINCESSE from mannequins page
