@@ -317,6 +317,7 @@ footer {
   object-position: center;
 }
 
+.hero-content h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 4rem;
   font-weight: 300;
