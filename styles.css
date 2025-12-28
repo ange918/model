@@ -276,16 +276,30 @@ footer {
   z-index: -2;
 }
 
+/* Mobile responsiveness for Hero Background */
+@media (max-width: 768px) {
+  .hero-slide {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center top;
+  }
+  
+  .hero {
+    height: 60vh; /* Adjust height on mobile for 'contain' images */
+    min-height: 400px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+  }
+}
+
+/* Ensure no cropping on all devices */
 .hero-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  background-position: center top;
 }
 
 .hero-slide.active {
