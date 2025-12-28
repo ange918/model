@@ -623,7 +623,7 @@ const modelsData = {
     23: {
         name: "ABOU BACAR",
         specialty: "Podium",
-        photo: "https://i.ibb.co/n8m6pXwT/image.jpg",
+        photo: "https://i.ibb.co/ymXYyGdC/Whats-App-Image-2025-12-27-at-23-41-35-2.jpg",
         bio: "Mannequin professionnel forme a Models Academy Management.",
         height: "1m87",
         hair: "Noir",
@@ -635,11 +635,14 @@ const modelsData = {
         hips: "95cm",
         shoeSize: "45 EU",
         portfolioPhotos: [
-            "https://i.ibb.co/n8m6pXwT/image.jpg",
-            "https://i.ibb.co/PvD83tSg/4-3.jpg",
-            "https://i.ibb.co/8D3Xm9mH/3-3.jpg",
-            "https://i.ibb.co/n8YpW9yP/2-3.jpg",
-            "https://i.ibb.co/67vP9zYm/1-2.jpg",
+            "https://i.ibb.co/ymXYyGdC/Whats-App-Image-2025-12-27-at-23-41-35-2.jpg",
+            "https://i.ibb.co/B5xsNcdZ/Whats-App-Image-2025-12-27-at-23-41-35-1.jpg",
+            "https://i.ibb.co/93n9GgcP/Whats-App-Image-2025-12-27-at-23-41-35.jpg",
+            "https://i.ibb.co/23SH9Gfr/Whats-App-Image-2025-12-27-at-23-41-34-3.jpg",
+            "https://i.ibb.co/TDGgmCDf/Whats-App-Image-2025-12-27-at-23-41-34-1.jpg",
+            "https://i.ibb.co/JwDB0hss/Whats-App-Image-2025-12-27-at-23-41-34.jpg",
+            "https://i.ibb.co/SXYC0gtq/Whats-App-Image-2025-12-27-at-23-41-33-1.jpg",
+            "https://i.ibb.co/R4hHH5gx/Whats-App-Image-2025-12-27-at-23-41-33.jpg",
         ],
         fashionPhotos: [
             "https://i.ibb.co/cc7T9mYP/5.jpg",
