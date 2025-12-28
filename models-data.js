@@ -619,6 +619,33 @@ const modelsData = {
         ],
     },
 
+    // ========== MANNEQUIN 23: ABOU BACAR ==========
+    23: {
+        name: "ABOU BACAR",
+        specialty: "Podium",
+        photo: "https://i.ibb.co/n8m6pXwT/image.jpg",
+        bio: "Mannequin professionnel forme a Models Academy Management.",
+        height: "1m87",
+        hair: "Noir",
+        eyes: "Marron",
+        city: "Cotonou",
+        experience: "2 ans",
+        bust: "82cm",
+        waist: "67cm",
+        hips: "95cm",
+        shoeSize: "45 EU",
+        portfolioPhotos: [
+            "https://i.ibb.co/n8m6pXwT/image.jpg",
+            "https://i.ibb.co/PvD83tSg/4-3.jpg",
+            "https://i.ibb.co/8D3Xm9mH/3-3.jpg",
+            "https://i.ibb.co/n8YpW9yP/2-3.jpg",
+            "https://i.ibb.co/67vP9zYm/1-2.jpg",
+        ],
+        fashionPhotos: [
+            "https://i.ibb.co/cc7T9mYP/5.jpg",
+        ],
+        shootingPhotos: [],
+    },
 
     // ========== MANNEQUIN 24: ADANTOLANKPE PASCAL ==========
     24: {
