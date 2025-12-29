@@ -110,7 +110,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 20px;
+  padding: 0.6rem 20px;
 }
 
 .logo {
@@ -120,7 +120,7 @@ header .container {
 }
 
 .logo .logo-img {
-  height: 90px;
+  height: 60px;
   width: auto;
   object-fit: contain;
 }

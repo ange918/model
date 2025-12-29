@@ -11,3 +11,4 @@
 [x] 11. Remove the 5 mannequins from models-data.js completely
 [x] 12. Completely remove the 5 mannequins from mannequins.html (not just hidden)
 [x] 13. Replace portfolio with polaroid on the model details page
+[x] 14. Reduce the header size (logo height and padding)
