@@ -422,8 +422,8 @@
             <h2 class="section-title">GALERIES</h2>
             
             <div class="gallery-tabs">
-                <button class="gallery-tab active" data-gallery="portfolio">
-                    <i class='bx bx-image'></i> PORTFOLIO
+                <button class="gallery-tab active" data-gallery="polaroid">
+                    <i class='bx bx-image'></i> POLAROID
                 </button>
                 <button class="gallery-tab" data-gallery="fashion">
                     <i class='bx bx-walk'></i> FASHION SHOW
@@ -433,8 +433,8 @@
                 </button>
             </div>
             
-            <div class="gallery-content active" id="portfolio-gallery">
-                <div class="gallery-grid" id="portfolioGrid"></div>
+            <div class="gallery-content active" id="polaroid-gallery">
+                <div class="gallery-grid" id="polaroidGrid"></div>
             </div>
             
             <div class="gallery-content" id="fashion-gallery">
@@ -519,14 +519,14 @@
             document.getElementById('modelHips').textContent = model.hips;
             document.getElementById('modelShoeSize').textContent = model.shoeSize;
             
-            const portfolioGrid = document.getElementById('portfolioGrid');
+            const polaroidGrid = document.getElementById('polaroidGrid');
             if (model.portfolioPhotos && model.portfolioPhotos.length > 0) {
                 model.portfolioPhotos.forEach(photo => {
                     const img = document.createElement('img');
                     img.src = photo;
-                    img.alt = 'Portfolio';
+                    img.alt = 'Polaroid';
                     img.loading = 'lazy';
-                    portfolioGrid.appendChild(img);
+                    polaroidGrid.appendChild(img);
                 });
             }
             

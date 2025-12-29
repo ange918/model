@@ -10,3 +10,4 @@
 [x] 10. Hide mannequins: KHADY TRAORE, ABOU BACAR, HONEL, NERI, and PRINCESSE from mannequins page
 [x] 11. Remove the 5 mannequins from models-data.js completely
 [x] 12. Completely remove the 5 mannequins from mannequins.html (not just hidden)
+[x] 13. Replace portfolio with polaroid on the model details page
