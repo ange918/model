@@ -241,7 +241,18 @@ const modelsData = {
             "https://i.ibb.co/gM6XDVJz/Whats-App-Image-2025-12-29-at-14-03-31.jpg",
             "https://i.ibb.co/FLdYVPKV/Whats-App-Image-2025-12-29-at-14-03-32.jpg",
         ],
-        shootingPhotos: [],
+        shootingPhotos: [
+            "https://i.ibb.co/SDpDNcJF/Whats-App-Image-2025-12-29-at-14-04-00-1.jpg",
+            "https://i.ibb.co/dwscgy6w/Whats-App-Image-2025-12-29-at-14-03-56-1.jpg",
+            "https://i.ibb.co/j9wxFdnp/Whats-App-Image-2025-12-29-at-14-03-56.jpg",
+            "https://i.ibb.co/cS6WgcQv/Whats-App-Image-2025-12-29-at-14-03-57.jpg",
+            "https://i.ibb.co/1GvK6DLh/Whats-App-Image-2025-12-29-at-14-03-54.jpg",
+            "https://i.ibb.co/8gP6qn2Y/Whats-App-Image-2025-12-29-at-14-03-50-1.jpg",
+            "https://i.ibb.co/Swb4ptmX/Whats-App-Image-2025-12-29-at-14-03-50.jpg",
+            "https://i.ibb.co/9kjfnXq8/Whats-App-Image-2025-12-29-at-14-03-44.jpg",
+            "https://i.ibb.co/WWR0NvzQ/Whats-App-Image-2025-12-29-at-14-03-41.jpg",
+            "https://i.ibb.co/jkKp1tqv/Whats-App-Image-2025-12-29-at-14-03-39.jpg",
+        ],
     },
 
 
