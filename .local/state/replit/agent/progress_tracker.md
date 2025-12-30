@@ -14,3 +14,4 @@
 [x] 14. Reduce the header size (logo height and padding)
 [x] 15. Add 14 fashion show photos to Lucia Padonou
 [x] 16. Add 10 shooting photos to Lucia Padonou
+[x] 17. Create privacy policy page and add link in step 4 of registration form
