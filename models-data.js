@@ -256,9 +256,9 @@ const modelsData = {
     },
 
 
-    // ========== MANNEQUIN 10: HOUNDJREGBO ROSE ==========
+    // ========== MANNEQUIN 10: HOUNDJREBO ROSE ==========
     10: {
-        name: "HOUNDJREGBO ROSE",
+        name: "HOUNDJREBO ROSE",
         specialty: "Podium",
         photo: "img/rose.jpg",
         bio: "Mannequin professionnelle formee a Models Academy Management.",
