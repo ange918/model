@@ -17,3 +17,4 @@
 [x] 17. Create privacy policy page and add link in step 4 of registration form
 [x] 18. Reduce spacing between "MODELS ACADEMY", "&", and "MANAGEMENT" in hero section
 [x] 19. Rename "TAILLE" to "HAUTEUR" on the model details page
+[x] 20. Update Rita's profile information (height, experience)
