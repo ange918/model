@@ -491,6 +491,9 @@
                                 <i class="bx bx-map"></i> Calavi Bidossessi,
                                 derrière la clôture de l'ORTB
                             </li>
+                            <li>
+                                <i class="bx bx-time"></i> Lun - Ven: 09h00 - 18h00
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -504,5 +507,24 @@
         </footer>
 
         <script src="main.js"></script>
+        <script>
+            // Add FadeIn animation for cards on scroll
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.card, .stat-item, .about-grid').forEach(el => {
+                el.classList.add('fade-in-scroll');
+                observer.observe(el);
+            });
+        </script>
     </body>
 </html>
