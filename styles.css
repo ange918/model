@@ -349,6 +349,7 @@ footer {
   animation: fadeInUp 1s ease;
   letter-spacing: 8px;
   text-transform: uppercase;
+  line-height: 1.1;
 }
 
 .hero-content p {
