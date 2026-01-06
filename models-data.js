@@ -1,25 +1,5 @@
-/*
-=====================================================
-CONFIGURATION DES MANNEQUINS - MODELS ACADEMY
-=====================================================
-
-COMMENT UTILISER LES LIENS IBB.CO:
-1. Uploadez votre image sur https://imgbb.com/
-2. Copiez le "Lien direct" (pas le lien de la page)
-   - Lien page (NE PAS UTILISER): https://ibb.co/dwr9LTNc
-   - Lien direct (A UTILISER): https://i.ibb.co/xxxxx/nom-image.jpg
-3. Collez le lien direct dans les champs ci-dessous
-
-EXEMPLES DE LIENS VALIDES:
-- https://i.ibb.co/Jw2LMRG/portrait.jpg
-- https://i.ibb.co/3mJ4XYZ/shooting-1.jpg
-- img/local-image.jpg (pour images locales)
-
-=====================================================
-*/
-
 const modelsData = {
-    // ========== MANNEQUIN 1: TOUNDOH OLERIE ==========
+    //  MANNEQUIN 1: TOUNDOH OLERIE 
     1: {
         name: "TOUNDOH OLERIE",
         specialty: "Podium",
@@ -61,7 +41,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 2: AZONWANOU RITA ==========
+    //  MANNEQUIN 2: AZONWANOU RITA 
     2: {
         name: "AZONWANOU RITA",
         specialty: "Photo",
@@ -114,7 +94,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 4: SENOU PAULA ==========
+    //  MANNEQUIN 4: SENOU PAULA 
     4: {
         name: "SENOU PAULA",
         specialty: "Podium",
@@ -142,7 +122,7 @@ const modelsData = {
         shootingPhotos: [],
     },
 
-    // ========== MANNEQUIN 5: AGBOGNON JOANA ==========
+    //  MANNEQUIN 5: AGBOGNON JOANA 
     5: {
         name: "AGBOGNON JOANA",
         specialty: "Model photo",
@@ -177,7 +157,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 7: GBAGUIDI DANIELLE ==========
+    //  MANNEQUIN 7: GBAGUIDI DANIELLE 
     7: {
         name: "GBAGUIDI DANIELLE",
         specialty: "Podium",
@@ -202,7 +182,7 @@ const modelsData = {
         shootingPhotos: [],
     },
 
-    // ========== MANNEQUIN 8: LUCIA PADONOU ==========
+    //  MANNEQUIN 8: LUCIA PADONOU 
     8: {
         name: "LUCIA PADONOU",
         specialty: "Podium",
@@ -256,7 +236,7 @@ const modelsData = {
     },
 
 
-    // ========== MANNEQUIN 10: HOUNDJREBO ROSE ==========
+    //  MANNEQUIN 10: HOUNDJREBO ROSE 
     10: {
         name: "HOUNDJREBO ROSE",
         specialty: "Podium",
@@ -282,7 +262,7 @@ const modelsData = {
         shootingPhotos: [],
     },
 
-    // ========== MANNEQUIN 11: MISSIHOUN MERVEILLE ==========
+    //  MANNEQUIN 11: MISSIHOUN MERVEILLE 
     11: {
         name: "MISSIHOUN MERVEILLE",
         specialty: "Podium",
@@ -313,7 +293,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 12: DATO MARIE-MICHELLE ==========
+    //  MANNEQUIN 12: DATO MARIE-MICHELLE 
     12: {
         name: "DATO MARIE-MICHELLE",
         specialty: "Podium",
@@ -341,7 +321,7 @@ const modelsData = {
         shootingPhotos: [],
     },
 
-    // ========== MANNEQUIN 13: AKPO MATTHIEU ==========
+    //  MANNEQUIN 13: AKPO MATTHIEU 
     13: {
         name: "AKPO MATTHIEU",
         specialty: "Podium",
@@ -407,7 +387,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 14: YEHOUN BARNARD ==========
+    //  MANNEQUIN 14: YEHOUN BARNARD 
     14: {
         name: "YEHOUN BARNARD",
         specialty: "Podium",
@@ -439,7 +419,7 @@ const modelsData = {
         shootingPhotos: [],
     },
 
-    // ========== MANNEQUIN 15: AMAH RODERIC ==========
+    //  MANNEQUIN 15: AMAH RODERIC 
     15: {
         name: "AMAH RODERIC",
         specialty: "Podium",
@@ -471,7 +451,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 16: HESSOU CYR-GOD ==========
+    // MANNEQUIN 16: HESSOU CYR-GOD 
     16: {
         name: "HESSOU CYR-GOD",
         specialty: "Podium",
@@ -485,7 +465,7 @@ const modelsData = {
         bust: "97cm",
         waist: "79cm",
         hips: "95cm",
-        shoeSize: "43 EU",
+        shoeSize: "45 EU",
         portfolioPhotos: [
             "img/cyr2.jpg",
            "https://i.ibb.co/DqbtmYT/cyr4.jpg",
@@ -499,7 +479,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 17: FAMIWA DALIL ==========
+    // MANNEQUIN 17: FAMIWA DALIL
     17: {
         name: "FAMIWA DALIL",
         specialty: "Podium",
@@ -524,7 +504,7 @@ const modelsData = {
         shootingPhotos: [ ],
     },
 
-    // ========== MANNEQUIN 18: SAGBO AMEN ==========
+    // MANNEQUIN 18: SAGBO AMEN 
     18: {
         name: "SAGBO AMEN",
         specialty: "Podium",
@@ -547,7 +527,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 19: MIDJINDOU GILDAS ==========
+    //  MANNEQUIN 19: MIDJINDOU GILDAS 
     19: {
         name: "MIDJINDOU GILDAS",
         specialty: "Podium",
@@ -579,7 +559,7 @@ const modelsData = {
     },
 
 
-    // ========== MANNEQUIN 21: GBEDEGLA GEORDYS ==========
+    //  MANNEQUIN 21: GBEDEGLA GEORDYS 
     21: {
         name: "GBEDEGLA GEORDYS",
         specialty: "Podium",
@@ -610,7 +590,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 22: VODOUNON JEDIEL ==========
+    //  MANNEQUIN 22: VODOUNON JEDIEL 
     22: {
         name: "VODOUNON JEDIEL",
         specialty: "Podium",
@@ -645,20 +625,20 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 23: ABOU BACAR ==========
+    // MANNEQUIN 23: ABOU BACAR 
     23: {
-        name: "ABOU BACAR",
+        name: " HOUNGBEDJI ABOU-BACAR",
         specialty: "Podium",
         photo: "https://i.ibb.co/ymXYyGdC/Whats-App-Image-2025-12-27-at-23-41-35-2.jpg",
         bio: "Mannequin professionnel forme a Models Academy Management.",
-        height: "1m87",
+        height: "1m86",
         hair: "Noir",
         eyes: "Marron",
         city: "Cotonou",
         experience: "2 ans",
-        bust: "82cm",
-        waist: "67cm",
-        hips: "95cm",
+        bust: "90cm",
+        waist: "77cm",
+        hips: "91cm",
         shoeSize: "45 EU",
         portfolioPhotos: [
             "https://i.ibb.co/ymXYyGdC/Whats-App-Image-2025-12-27-at-23-41-35-2.jpg",
@@ -676,7 +656,7 @@ const modelsData = {
         shootingPhotos: [],
     },
 
-    // ========== MANNEQUIN 24: ADANTOLANKPE PASCAL ==========
+    //  MANNEQUIN 24: ADANTOLANKPE PASCAL 
     24: {
         name: "ADANTOLANKPE PASCAL",
         specialty: "Podium",
@@ -714,7 +694,7 @@ const modelsData = {
         ],
     },
 
-    // ========== MANNEQUIN 25: SEKPO MESHACK ==========
+    //  MANNEQUIN 25: SEKPO MESHACK
     25: {
         name: "SEKPO MESHACK",
         specialty: "Podium",
