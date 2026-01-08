@@ -51,7 +51,28 @@ function sendEmails($formData, $files = []) {
         $confirmMail->setFrom('contact@modelacademy-management.com', 'Models Academy Management');
         $confirmMail->addAddress($formData['email']);
         $confirmMail->Subject = 'Confirmation de réception – Models Academy Management';
-        $confirmMail->Body    = "Nous avons reçu votre demande avec succès.\n\nSi vous n'obtenez pas de réponse après cinq (5) jours, cela signifie que votre demande n'a pas été acceptée.\n\nModels Academy Management";
+        $confirmMail->isHTML(true);
+        
+        $htmlBody = "
+        <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 8px;'>
+            <div style='text-align: center; margin-bottom: 20px;'>
+                <h2 style='color: #333; text-transform: uppercase; letter-spacing: 2px;'>Models Academy Management</h2>
+            </div>
+            <div style='color: #555; line-height: 1.6;'>
+                <p>Bonjour,</p>
+                <p>Nous avons reçu votre demande avec succès.</p>
+                <p style='background-color: #f9f9f9; padding: 15px; border-left: 4px solid #333;'>
+                    Si vous n'obtenez pas de réponse après cinq (5) jours, cela signifie que votre demande n'a pas été acceptée.
+                </p>
+                <p style='margin-top: 30px;'>Cordialement,<br><strong>Models Academy Management</strong></p>
+            </div>
+            <div style='margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999; text-align: center;'>
+                &copy; " . date('Y') . " Models Academy Management. Tous droits réservés.
+            </div>
+        </div>";
+        
+        $confirmMail->Body = $htmlBody;
+        $confirmMail->AltBody = "Nous avons reçu votre demande avec succès.\n\nSi vous n'obtenez pas de réponse après cinq (5) jours, cela signifie que votre demande n'a pas été acceptée.\n\nModels Academy Management";
 
         $confirmMail->send();
 
