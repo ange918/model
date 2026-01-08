@@ -83,10 +83,15 @@ document.getElementById('inscriptionForm')?.addEventListener('submit', function(
     .then(response => response.json())
     .then(data => {
       if (data.success) {
-        alert(data.message);
+        // Show success toast/message
+        const msg = document.createElement('div');
+        msg.textContent = data.message;
+        msg.style.cssText = 'position:fixed;top:20px;right:20px;background:#000;color:#fff;padding:15px 25px;z-index:10000;border-radius:4px;font-family:Montserrat,sans-serif;';
+        document.body.appendChild(msg);
+        
         setTimeout(() => {
           window.location.href = 'index.html';
-        }, 2000);
+        }, 3000);
       } else {
         alert('Erreur: ' + data.message);
       }

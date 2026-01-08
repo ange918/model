@@ -33,3 +33,11 @@ externalPort = 80
 [nix]
 channel = "stable-25_05"
 packages = ["imagemagick", "jpegoptim", "optipng"]
+
+[userenv]
+
+[userenv.shared]
+SMTP_HOST = "mail.modelacademy-management.com"
+SMTP_PORT = "465"
+SMTP_USER = "contact@modelacademy-management.com"
+SMTP_PASS = "91rerdakonde"
