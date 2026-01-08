@@ -13,7 +13,7 @@ function sendEmails($formData, $files = []) {
         $mail->SMTPAuth   = true;
         $mail->Username   = getenv('SMTP_USER');
         $mail->Password   = getenv('SMTP_PASS');
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = getenv('SMTP_PORT');
         $mail->CharSet    = 'UTF-8';
 
@@ -44,7 +44,7 @@ function sendEmails($formData, $files = []) {
         $confirmMail->SMTPAuth   = true;
         $confirmMail->Username   = getenv('SMTP_USER');
         $confirmMail->Password   = getenv('SMTP_PASS');
-        $confirmMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $confirmMail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $confirmMail->Port       = getenv('SMTP_PORT');
         $confirmMail->CharSet    = 'UTF-8';
 

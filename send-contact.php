@@ -1,11 +1,6 @@
 <?php
 require 'mail-util.php';
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo json_encode(['success' => false, 'message' => 'Méthode non autorisée']);
-    exit;
-}
-
 $nom = $_POST['nom'] ?? '';
 $email = $_POST['email'] ?? '';
 $sujet = $_POST['sujet'] ?? '';
