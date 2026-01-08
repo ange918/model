@@ -19,3 +19,6 @@
 [x] 19. Rename "TAILLE" to "HAUTEUR" on the model details page
 [x] 20. Update Rita's profile information (height, experience)
 [x] 21. Correct Rose's last name to HOUNDJREBO
+[x] 22. Configure PHPMailer for contact and registration forms with SMTP and dual notifications
+[x] 23. Add auto-reply confirmation email for users
+[x] 24. Implement success toast notifications on frontend
