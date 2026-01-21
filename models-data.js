@@ -15,6 +15,8 @@ const modelsData = {
         hips: "102cm",
         shoeSize: "41 EU",
         portfolioPhotos: [
+            "https://i.ibb.co/wFmRTQnG/Whats-App-Image-2026-01-17-at-22-48-48.jpg",
+            "https://i.ibb.co/7JQJKQYc/Whats-App-Image-2026-01-17-at-22-48-49.jpg",
             "https://i.ibb.co/zWzJHW57/olerie3.jpg",
             "https://i.ibb.co/Y4Xzmzq2/olerie1.jpg",
             "https://i.ibb.co/DfH1rqxD/olerie.jpg",
@@ -158,6 +160,34 @@ const modelsData = {
     },
 
     //  MANNEQUIN 7: GBAGUIDI DANIELLE 
+    6: {
+        name: "TOSSOU HONEL",
+        specialty: "Podium",
+        photo: "https://i.ibb.co/d4qNn3JF/Whats-App-Image-2026-01-17-at-22-48-40.jpg",
+        bio: "Mannequin professionnel forme a Models Academy Management.",
+        height: "1m87",
+        hair: "Noir",
+        eyes: "Marron",
+        city: "Cotonou",
+        experience: "2 ans",
+        bust: "33",
+        waist: "28",
+        hips: "35",
+        shoeSize: "45-46 EU",
+        portfolioPhotos: [
+            "https://i.ibb.co/d4qNn3JF/Whats-App-Image-2026-01-17-at-22-48-40.jpg",
+            "https://i.ibb.co/Wvgj4rVx/Whats-App-Image-2026-01-17-at-22-48-39.jpg",
+            "https://i.ibb.co/kVRQ58c2/Whats-App-Image-2026-01-17-at-22-48-38.jpg",
+            "https://i.ibb.co/0yGvbfzD/Whats-App-Image-2026-01-17-at-22-48-37.jpg",
+            "https://i.ibb.co/PzrwCtGH/Whats-App-Image-2026-01-17-at-22-48-35-1.jpg",
+            "https://i.ibb.co/MDgwTH9k/Whats-App-Image-2026-01-17-at-22-48-35.jpg",
+            "https://i.ibb.co/GQTmQRFc/Whats-App-Image-2026-01-17-at-22-48-34-1.jpg",
+        ],
+        fashionPhotos: [],
+        shootingPhotos: [],
+    },
+
+    //  MANNEQUIN 7: GBAGUIDI DANIELLE 
     7: {
         name: "GBAGUIDI DANIELLE",
         specialty: "Podium",
@@ -173,6 +203,12 @@ const modelsData = {
         hips: "92cm",
         shoeSize: "41 EU",
         portfolioPhotos: [
+            "https://i.ibb.co/7tGy8x8H/Whats-App-Image-2026-01-17-at-22-48-34.jpg",
+            "https://i.ibb.co/TDCZscRq/Whats-App-Image-2026-01-17-at-22-48-32.jpg",
+            "https://i.ibb.co/20fcFRnQ/Whats-App-Image-2026-01-17-at-22-48-30.jpg",
+            "https://i.ibb.co/L4N25Wk/Whats-App-Image-2026-01-17-at-22-48-28.jpg",
+            "https://i.ibb.co/BKgcMj1K/Whats-App-Image-2026-01-17-at-22-48-21.jpg",
+            "https://i.ibb.co/BHcj9x7H/Whats-App-Image-2026-01-17-at-22-48-25.jpg",
             "https://i.ibb.co/cc2pzspB/12-5.jpg",
             "https://i.ibb.co/gM0yxbXX/3-5.jpg",
             "https://i.ibb.co/99y3YJTR/5-2.jpg",
@@ -309,6 +345,13 @@ const modelsData = {
         hips: "84cm",
         shoeSize: "38 EU",
         portfolioPhotos: [
+            "https://i.ibb.co/60SP5Cxr/Whats-App-Image-2026-01-17-at-22-48-46.jpg",
+            "https://i.ibb.co/TMdwpYhZ/Whats-App-Image-2026-01-17-at-22-48-45.jpg",
+            "https://i.ibb.co/4RXDKSJz/Whats-App-Image-2026-01-17-at-22-48-43.jpg",
+            "https://i.ibb.co/327XnzH/Whats-App-Image-2026-01-17-at-22-48-42-1.jpg",
+            "https://i.ibb.co/pvFmGhJy/Whats-App-Image-2026-01-17-at-22-48-42.jpg",
+            "https://i.ibb.co/HT4vzxgC/Whats-App-Image-2026-01-17-at-22-48-41-1.jpg",
+            "https://i.ibb.co/YBBWZ3Cx/Whats-App-Image-2026-01-17-at-22-48-41.jpg",
             "https://i.ibb.co/WN8z8Qw1/14-2.jpg",
             "https://i.ibb.co/9kb8rMxd/11.jpg",
             "https://i.ibb.co/MkvB0Mb8/12.jpg",

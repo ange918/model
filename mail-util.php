@@ -7,15 +7,22 @@ require 'vendor/autoload.php';
 function sendEmails($formData, $files = []) {
     $mail = new PHPMailer(true);
     try {
-        // Server settings
+        // Paramètres SMTP directement intégrés pour l'hébergement
         $mail->isSMTP();
-        $mail->Host       = getenv('SMTP_HOST');
+        $mail->Host       = 'mail.modelacademy-management.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = getenv('SMTP_USER');
-        $mail->Password   = getenv('SMTP_PASS');
+        $mail->Username   = 'contact@modelacademy-management.com';
+        $mail->Password   = '91rerdakonde';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = getenv('SMTP_PORT');
+        $mail->Port       = 465;
         $mail->CharSet    = 'UTF-8';
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
 
         // Recipients
         $mail->setFrom('contact@modelacademy-management.com', 'Models Academy Management');
@@ -40,13 +47,20 @@ function sendEmails($formData, $files = []) {
         // Confirmation to User
         $confirmMail = new PHPMailer(true);
         $confirmMail->isSMTP();
-        $confirmMail->Host       = getenv('SMTP_HOST');
+        $confirmMail->Host       = 'mail.modelacademy-management.com';
         $confirmMail->SMTPAuth   = true;
-        $confirmMail->Username   = getenv('SMTP_USER');
-        $confirmMail->Password   = getenv('SMTP_PASS');
+        $confirmMail->Username   = 'contact@modelacademy-management.com';
+        $confirmMail->Password   = '91rerdakonde';
         $confirmMail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $confirmMail->Port       = getenv('SMTP_PORT');
+        $confirmMail->Port       = 465;
         $confirmMail->CharSet    = 'UTF-8';
+        $confirmMail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
 
         $confirmMail->setFrom('contact@modelacademy-management.com', 'Models Academy Management');
         $confirmMail->addAddress($formData['email']);
